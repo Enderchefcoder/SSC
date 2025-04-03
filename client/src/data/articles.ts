@@ -19,9 +19,9 @@ export const articles: Article[] = [
       <h3>Cultural Significance</h3>
       <p>The pyramids weren't just fancy tombs - they were super important religious monuments. ⛪ According to ancient Egyptian beliefs, the pyramid shape represented the first mound of earth that rose from the waters at the beginning of time. 🌊 They also served as a stairway for the pharaoh to climb up to the stars after death. ✨</p>
     `,
-    imageUrl: "https://images.unsplash.com/photo-1594741158705-2fb3a4a81f01?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-    imageAlt: "Great Pyramids of Giza",
-    imageCredit: "Photo by Ahmed Samir on Unsplash",
+    imageUrl: "https://images.unsplash.com/photo-1605981973512-fb18430a4fb3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    imageAlt: "Great Pyramids of Giza at sunset",
+    imageCredit: "Photo by Spencer Davis on Unsplash",
     publishDate: "2023-05-15",
     readTime: 8,
     ageLevel: "Middle School",
@@ -37,10 +37,40 @@ export const articles: Article[] = [
     didYouKnow: {
       fact: "The Great Pyramid contains about 2.3 million stone blocks, each weighing around 2.5 tons! 😱 The largest blocks in the King's Chamber weigh as much as 80 tons - that's like 16 elephants stacked together! 🐘"
     },
-    discussionQuestions: [
-      "Why do you think the ancient Egyptians put so much time and effort into building the pyramids? 🤔",
-      "How do you think building the pyramids affected everyday life in ancient Egypt? 👨‍👩‍👧‍👦",
-      "What can we learn about ancient Egyptian knowledge of math and engineering from the pyramids? 🧮"
+    quiz: [
+      {
+        question: "Why did the ancient Egyptians build pyramids?",
+        options: [
+          "As entertainment venues for the public",
+          "As tombs for their pharaohs to help them reach the afterlife",
+          "As storage facilities for grain",
+          "As military fortifications"
+        ],
+        correctAnswer: 1,
+        explanation: "Pyramids were built as elaborate tombs for pharaohs. They believed these structures would help the pharaoh's spirit ascend to the afterlife."
+      },
+      {
+        question: "Approximately how many stone blocks were used to build the Great Pyramid of Giza?",
+        options: [
+          "Around 5,000",
+          "Around 50,000",
+          "Around 2.3 million",
+          "Around 10 million"
+        ],
+        correctAnswer: 2,
+        explanation: "The Great Pyramid contains approximately 2.3 million stone blocks, each weighing between 2.5 to 15 tons."
+      },
+      {
+        question: "What mathematical knowledge is demonstrated by the pyramids' construction?",
+        options: [
+          "Basic arithmetic only",
+          "Complex geometry and astronomy",
+          "Modern calculus",
+          "No mathematical knowledge was used"
+        ],
+        correctAnswer: 1,
+        explanation: "The Egyptians used sophisticated geometric principles and astronomical alignments in pyramid construction."
+      }
     ],
     sources: [
       {
@@ -85,8 +115,9 @@ export const articles: Article[] = [
       <h3>Legacy in Modern Governance</h3>
       <p>Greek democratic ideas are everywhere in modern governments! 🌍 Concepts like citizen equality under law, the importance of debate and deliberation, and the right of citizens to determine their own laws all have roots in Greek ideas. 🌱 Even government symbols and architecture—like columns and domes—were borrowed from Greece by many modern nations. 🏛️</p>
     `,
-    imageUrl: "https://images.unsplash.com/photo-1565619624098-cf4168a7cd9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    imageAlt: "Ancient Greek Parthenon",
+    imageUrl: "https://images.unsplash.com/photo-1603779702200-ea19a28070e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "The Parthenon on the Acropolis of Athens",
+    imageCredit: "Photo by Spencer Davis on Unsplash",
     publishDate: "2023-05-10",
     readTime: 12,
     ageLevel: "Middle School",
@@ -102,10 +133,40 @@ export const articles: Article[] = [
     didYouKnow: {
       fact: "In ancient Athens, they used a device called a kleroterion (a sort of lottery machine) to randomly select citizens for public duties! 📖 This random selection was considered more democratic than elections, which might favor the wealthy or famous! 👨‍👩‍👧‍👦"
     },
-    discussionQuestions: [
-      "How do our modern governments compare to Ancient Athenian democracy? 🤔",
-      "What do you think makes democratic governments vulnerable to collapse? ⚠️",
-      "Why is citizen participation so important in a democracy? 🏛️"
+    quiz: [
+      {
+        question: "What does the word 'democracy' literally mean?",
+        options: [
+          "Rule by the wealthy",
+          "People power",
+          "Government leadership",
+          "Equal freedom"
+        ],
+        correctAnswer: 1,
+        explanation: "The word democracy comes from Greek words 'demos' (people) and 'kratos' (power) meaning 'people power'."
+      },
+      {
+        question: "Which group was NOT allowed to participate in ancient Athenian democracy?",
+        options: [
+          "Elderly men",
+          "Poor citizens",
+          "Landowners",
+          "Women"
+        ],
+        correctAnswer: 3,
+        explanation: "Women, along with slaves and foreigners, were excluded from political participation in ancient Athens."
+      },
+      {
+        question: "What was the Ekklesia in ancient Athens?",
+        options: [
+          "The main marketplace",
+          "A religious temple",
+          "The assembly where citizens could vote on laws",
+          "The royal palace"
+        ],
+        correctAnswer: 2,
+        explanation: "The Ekklesia was the assembly where all male citizens could participate in direct democracy by voting on laws."
+      }
     ],
     sources: [
       {
@@ -149,8 +210,9 @@ export const articles: Article[] = [
       
       <p>While the Gold Rush eventually ended as gold became harder to find, its effects are still felt in California's diverse population, entrepreneurial spirit, and continuing growth. 🌱</p>
     `,
-    imageUrl: "https://images.unsplash.com/photo-1584992236310-6edddc08acff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    imageAlt: "Gold mining equipment and river",
+    imageUrl: "https://images.unsplash.com/photo-1571407509209-73d3e4a45892?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Gold mining pan with gold nuggets",
+    imageCredit: "Photo by James Lee on Unsplash",
     publishDate: "2023-07-04",
     readTime: 10,
     ageLevel: "Elementary",
@@ -166,10 +228,40 @@ export const articles: Article[] = [
     didYouKnow: {
       fact: "The total amount of gold found during the California Gold Rush weighs about 750,000 pounds! 😲 That would be worth about $2 billion today - enough money to buy 20 million video game consoles! 🎮"
     },
-    discussionQuestions: [
-      "Why do you think people were willing to risk so much to search for gold in California? 💭",
-      "How did the Gold Rush change California's environment and landscape? 🏞️",
-      "What other 'gold rushes' or resource booms have happened in history? How were they similar or different? 🔍"
+    quiz: [
+      {
+        question: "When did the California Gold Rush begin?",
+        options: [
+          "1828",
+          "1848",
+          "1868",
+          "1888"
+        ],
+        correctAnswer: 1,
+        explanation: "The California Gold Rush began in January 1848 when James W. Marshall discovered gold flakes while building a sawmill along the American River."
+      },
+      {
+        question: "What was a popular nickname for people who came to California seeking gold in 1849?",
+        options: [
+          "Gold-seekers",
+          "California dreamers",
+          "Forty-niners",
+          "Gold miners"
+        ],
+        correctAnswer: 2,
+        explanation: "People who rushed to California in 1849 were nicknamed 'forty-niners' after the year they arrived."
+      },
+      {
+        question: "How did the Gold Rush affect San Francisco's population?",
+        options: [
+          "It decreased as people left to find gold",
+          "It stayed about the same",
+          "It grew from about 200 people to 36,000 people",
+          "It grew by only a few hundred people"
+        ],
+        correctAnswer: 2,
+        explanation: "San Francisco exploded from a tiny settlement of about 200 people in 1846 to a booming city of around 36,000 by 1852."
+      }
     ],
     sources: [
       {
@@ -208,8 +300,9 @@ export const articles: Article[] = [
       
       <p>Between the Sphinx's giant paws stands a stone tablet called the Dream Stela. 💭 It tells the story of how the Sphinx appeared to Pharaoh Thutmose IV in a dream, promising him the throne if he would dig the monument out from the sand that had buried much of it. 👑 Some wonder if this ancient tablet might contain clues to even more Sphinx secrets! 🗝️</p>
     `,
-    imageUrl: "https://images.unsplash.com/photo-1564979045531-fa386a275b27?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    imageAlt: "Sphinx at Giza",
+    imageUrl: "https://images.unsplash.com/photo-1590102389740-b48e86dbd761?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Close up of the Great Sphinx of Giza",
+    imageCredit: "Photo by Mostafa Dokmak on Unsplash",
     publishDate: "2023-06-01",
     readTime: 10,
     ageLevel: "Middle School",
@@ -224,10 +317,40 @@ export const articles: Article[] = [
     didYouKnow: {
       fact: "The Arabic name for the Sphinx is Abu al-Hol, which means 'Father of Terror'! 😱 This reflects the awe and fear this massive monument inspired in ancient times! 🙌"
     },
-    discussionQuestions: [
-      "Why do you think the ancient Egyptians created a monument combining human and animal features? 🧠",
-      "What might explain the different theories about the Sphinx's age? 📆",
-      "How have modern technologies changed our understanding of ancient monuments? 🛰️"
+    quiz: [
+      {
+        question: "What is the Sphinx made from?",
+        options: [
+          "Blocks of granite assembled together",
+          "A single piece of limestone",
+          "Mud bricks covered with plaster",
+          "Bronze metal sheets"
+        ],
+        correctAnswer: 1,
+        explanation: "The Great Sphinx is the largest statue carved from a single piece of limestone in the world."
+      },
+      {
+        question: "What was NOT a feature of the original Sphinx that is now missing?",
+        options: [
+          "Colorful paint",
+          "A nose",
+          "A royal beard",
+          "Wings"
+        ],
+        correctAnswer: 3,
+        explanation: "The Sphinx originally had paint, a nose, and a royal beard, but it was never depicted with wings."
+      },
+      {
+        question: "What is the Dream Stela?",
+        options: [
+          "A stone tablet between the Sphinx's paws",
+          "An ancient Egyptian book about dreams",
+          "A nickname for the Sphinx itself",
+          "A painting found in Tutankhamun's tomb"
+        ],
+        correctAnswer: 0,
+        explanation: "The Dream Stela is a stone tablet between the Sphinx's paws telling the story of Pharaoh Thutmose IV's dream."
+      }
     ],
     relatedArticles: ["1", "5"]
   },
@@ -271,10 +394,40 @@ export const articles: Article[] = [
     didYouKnow: {
       fact: "The world's oldest known written recipe is from Mesopotamia—a recipe for beer written on a clay tablet around 3900 BCE! 🍺 Beer was considered a gift from the gods and was often used in religious ceremonies! 🙏"
     },
-    discussionQuestions: [
-      "How did the geography between the two rivers influence the development of Mesopotamian civilization? 🗺️",
-      "Why is writing considered one of humanity's most important inventions? 📖",
-      "How do the achievements of Mesopotamia continue to influence our world today? 🌐"
+    quiz: [
+      {
+        question: "What does the name 'Mesopotamia' mean?",
+        options: [
+          "Land of many waters",
+          "Between rivers",
+          "Ancient civilization",
+          "First kingdom"
+        ],
+        correctAnswer: 1,
+        explanation: "Mesopotamia comes from Greek words meaning 'between rivers,' referring to its location between the Tigris and Euphrates rivers."
+      },
+      {
+        question: "When did the Sumerians develop cuneiform writing?",
+        options: [
+          "Around 10,000 BCE",
+          "Around 3400 BCE",
+          "Around 1000 BCE",
+          "Around 500 CE"
+        ],
+        correctAnswer: 1,
+        explanation: "Cuneiform script was developed around 3400 BCE, starting as simple picture symbols for counting before evolving into a complex writing system."
+      },
+      {
+        question: "Which of these innovations did NOT come from Mesopotamia?",
+        options: [
+          "The wheel",
+          "Irrigation systems",
+          "The compass",
+          "The Code of Hammurabi"
+        ],
+        correctAnswer: 2,
+        explanation: "The compass was developed in ancient China, not Mesopotamia. The other innovations listed were all Mesopotamian achievements."
+      }
     ],
     sources: [
       {
@@ -340,10 +493,40 @@ export const articles: Article[] = [
     didYouKnow: {
       fact: "The United States has 63 national parks covering over 52 million acres! 🏞️ The first national park, Yellowstone, was established in 1872, becoming the first national park in the world! 🌋"
     },
-    discussionQuestions: [
-      "Which region of the United States would you most like to visit and why? 🧳",
-      "How does the geography of a region affect the way people live there? 🏠",
-      "What are some special features of the region where you live? 📍"
+    quiz: [
+      {
+        question: "How many states make up the United States?",
+        options: [
+          "48",
+          "49",
+          "50",
+          "52"
+        ],
+        correctAnswer: 2,
+        explanation: "The United States consists of 50 states, including the 48 contiguous states plus Alaska and Hawaii."
+      },
+      {
+        question: "Which region is known as 'America's Heartland'?",
+        options: [
+          "The Northeast",
+          "The South",
+          "The Midwest",
+          "The West"
+        ],
+        correctAnswer: 2,
+        explanation: "The Midwest is often called America's Heartland, known for its farming, friendly people, and the Great Lakes."
+      },
+      {
+        question: "Which is NOT a natural feature found in the Southern region?",
+        options: [
+          "The Everglades",
+          "The Great Lakes",
+          "Bayous",
+          "The Great Smoky Mountains"
+        ],
+        correctAnswer: 1,
+        explanation: "The Great Lakes are located in the Midwest region, not the South. The other features are all found in the Southern states."
+      }
     ],
     sources: [
       {
