@@ -1,33 +1,24 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "wouter";
-import ArticleDetail from "@/components/ArticleDetail";
-import RelatedArticles from "@/components/RelatedArticles";
-import ReadingProgressBar from "@/components/ReadingProgressBar";
-import Newsletter from "@/components/Newsletter";
-import { getArticleBySlug, getRelatedArticles } from "@/data/articles";
-import { getArticlesFromLocalStorage } from "@/utils/articleUtils";
-import { Article } from "@/types";
+import { useState, useEffect } from 'react';
+import { useLocation } from 'wouter';
+import ArticleEditor from '@/components/ArticleEditor';
+import { Article } from '@/types';
+import { getArticleBySlug } from '@/data/articles';
+import { getArticlesFromLocalStorage } from '@/utils/articleUtils';
 
-type ArticlePageProps = {
+type EditArticlePageProps = {
   params: {
     slug: string;
   };
 };
 
-const ArticlePage = ({ params }: ArticlePageProps) => {
-  const [article, setArticle] = useState<Article | null>(null);
-  const [relatedArticles, setRelatedArticles] = useState<Article[]>([]);
+const EditArticlePage = ({ params }: EditArticlePageProps) => {
+  const [article, setArticle] = useState<Article | undefined>(undefined);
   const [isLoading, setIsLoading] = useState(true);
-  const [isPrintMode, setIsPrintMode] = useState(false);
   const [, setLocation] = useLocation();
 
   useEffect(() => {
     const fetchArticle = () => {
       setIsLoading(true);
-      
-      // Check for print mode in URL
-      const urlParams = new URLSearchParams(window.location.search);
-      setIsPrintMode(urlParams.get('print') === 'true');
       
       // First, check if it's in the standard articles
       let foundArticle = getArticleBySlug(params.slug);
@@ -40,12 +31,6 @@ const ArticlePage = ({ params }: ArticlePageProps) => {
       
       if (foundArticle) {
         setArticle(foundArticle);
-        
-        // Get related articles
-        if (foundArticle.relatedArticles && foundArticle.relatedArticles.length > 0) {
-          const related = getRelatedArticles(foundArticle.id);
-          setRelatedArticles(related);
-        }
       } else {
         // Article not found, redirect to 404
         setLocation("/not-found");
@@ -78,18 +63,8 @@ const ArticlePage = ({ params }: ArticlePageProps) => {
   }
 
   return (
-    <div className={isPrintMode ? "print-mode" : ""}>
-      {!isPrintMode && <ReadingProgressBar articleId={article.id} />}
-      <ArticleDetail article={article} isPrintMode={isPrintMode} />
-      
-      {!isPrintMode && (
-        <>
-          <RelatedArticles articles={relatedArticles} />
-          <Newsletter />
-        </>
-      )}
-    </div>
+    <ArticleEditor article={article} isNew={false} />
   );
 };
 
-export default ArticlePage;
+export default EditArticlePage;

@@ -9,8 +9,11 @@ import ArticlePage from "@/pages/ArticlePage";
 import Resources from "@/pages/Resources";
 import About from "@/pages/About";
 import NotFound from "@/pages/not-found";
+import CreateArticlePage from "@/pages/CreateArticlePage";
+import EditArticlePage from "@/pages/EditArticlePage";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ArticleImporter from "@/components/ArticleImporter";
 
 function Router() {
   return (
@@ -23,6 +26,11 @@ function Router() {
           <Route path="/article/:slug" component={ArticlePage} />
           <Route path="/resources" component={Resources} />
           <Route path="/about" component={About} />
+          <Route path="/create-article" component={CreateArticlePage} />
+          <Route path="/edit-article/:slug">
+            {(params) => <EditArticlePage params={params} />}
+          </Route>
+          <Route path="/import-article" component={ArticleImporter} />
           <Route component={NotFound} />
         </Switch>
       </main>

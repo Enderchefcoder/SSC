@@ -1,13 +1,21 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import Hero from "@/components/Hero";
 import ArticleCard from "@/components/ArticleCard";
 import { searchArticles } from "@/data/articles";
+import { getArticlesFromLocalStorage } from "@/utils/articleUtils";
 import { AgeLevel, AgeLevelFilter, Article } from "@/types";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { GraduationCap, BookOpen, Award, Search } from "lucide-react";
+import { 
+  GraduationCap, 
+  BookOpen, 
+  Search, 
+  PlusCircle, 
+  FileUp, 
+  Edit 
+} from "lucide-react";
 
 const Articles = () => {
   const [location] = useLocation();
@@ -39,8 +47,41 @@ const Articles = () => {
     
     // Simulate search delay
     setTimeout(() => {
-      const results = searchArticles(query, level);
-      setSearchResults(results);
+      // Get standard articles
+      const defaultResults = searchArticles(query, level);
+      
+      // Get articles from localStorage
+      const localArticles = getArticlesFromLocalStorage();
+      
+      // Filter local articles based on search criteria
+      const localResults = localArticles.filter(article => {
+        // Filter by age level if specified
+        if (level !== 'All' && article.ageLevel !== level) {
+          return false;
+        }
+        
+        // Search by query in title, description, and content
+        if (query) {
+          const searchTerms = query.toLowerCase();
+          return (
+            article.title.toLowerCase().includes(searchTerms) ||
+            article.description.toLowerCase().includes(searchTerms) ||
+            article.content.toLowerCase().includes(searchTerms)
+          );
+        }
+        
+        return true;
+      });
+      
+      // Combine results (local articles first to allow overriding)
+      const combined = [...localResults, ...defaultResults];
+      
+      // Remove duplicates (if a local article has the same ID as a default one)
+      const uniqueResults = combined.filter((article, index, self) => 
+        index === self.findIndex(a => a.id === article.id)
+      );
+      
+      setSearchResults(uniqueResults);
       setIsSearching(false);
     }, 500);
   };
@@ -115,6 +156,22 @@ const Articles = () => {
           </div>
         </div>
         
+        <div className="mt-8 mb-12 flex justify-center gap-4">
+          <Link href="/create-article">
+            <Button className="flex items-center gap-2">
+              <PlusCircle className="h-5 w-5" />
+              Create New Article
+            </Button>
+          </Link>
+          
+          <Link href="/import-article">
+            <Button variant="outline" className="flex items-center gap-2">
+              <FileUp className="h-5 w-5" />
+              Import Article
+            </Button>
+          </Link>
+        </div>
+        
         <div className="mt-12">
           {isSearching ? (
             <div className="text-center py-12">
@@ -124,7 +181,17 @@ const Articles = () => {
           ) : searchResults.length > 0 ? (
             <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
               {searchResults.map((article) => (
-                <ArticleCard key={article.id} article={article} />
+                <div key={article.id} className="relative group">
+                  <ArticleCard article={article} />
+                  <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Link href={`/edit-article/${article.slug}`}>
+                      <Button size="sm" variant="secondary" className="flex items-center gap-1">
+                        <Edit className="h-3 w-3" />
+                        Edit
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
               ))}
             </div>
           ) : (

@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { 
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
+  Card, 
+  CardContent, 
+  CardDescription, 
+  CardFooter, 
+  CardHeader, 
   CardTitle 
 } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { ChevronRight, ChevronLeft, Calendar, Clock } from 'lucide-react';
 
 export type TimelineEvent = {
   id: string;
@@ -21,92 +24,117 @@ interface InteractiveTimelineProps {
 }
 
 const InteractiveTimeline = ({ events, title = "Historical Timeline" }: InteractiveTimelineProps) => {
-  const [activeEvent, setActiveEvent] = useState<string | null>(events.length > 0 ? events[0].id : null);
-  const [zoomed, setZoomed] = useState(false);
-
-  // Sort events by date
-  const sortedEvents = [...events].sort((a, b) => {
-    return new Date(a.date).getTime() - new Date(b.date).getTime();
-  });
-
-  const getActiveEvent = () => {
-    return events.find(event => event.id === activeEvent);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  if (!events || events.length === 0) {
+    return null;
+  }
+  
+  const currentEvent = events[currentIndex];
+  
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : events.length - 1));
   };
-
+  
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex < events.length - 1 ? prevIndex + 1 : 0));
+  };
+  
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+  
   return (
     <div className="my-8">
-      <div className="mb-4">
-        <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
-        <p className="text-sm text-gray-500 mt-1">Click on a point to learn more about the event</p>
-      </div>
-      
-      {/* Timeline UI */}
-      <div className={`relative bg-gray-100 rounded-lg p-4 transition-all duration-300 ${zoomed ? 'h-96' : 'h-32'}`}>
-        <div className="absolute left-0 right-0 top-1/2 h-1 bg-primary-200 transform -translate-y-1/2">
-          {sortedEvents.map((event, index) => {
-            const position = `${(index / (events.length - 1)) * 100}%`;
-            
-            return (
-              <button
-                key={event.id}
-                className={`absolute w-4 h-4 rounded-full -ml-2 -mt-1.5 transform transition-all duration-200 hover:scale-125 focus:outline-none focus:ring-2 focus:ring-primary-500 
-                  ${event.id === activeEvent ? 'bg-primary-600 scale-125' : 'bg-primary-400'}`}
-                style={{ left: position }}
-                onClick={() => setActiveEvent(event.id)}
-                title={`${event.date}: ${event.title}`}
-              />
-            );
-          })}
-        </div>
+      <Card className="relative overflow-hidden">
+        <CardHeader className="pb-2">
+          <CardTitle className="flex items-center text-lg">
+            <Calendar className="h-5 w-5 mr-2" />
+            {title}
+          </CardTitle>
+          <CardDescription>
+            Explore key events in chronological order
+          </CardDescription>
+        </CardHeader>
         
-        {/* Date labels */}
-        <div className="absolute left-0 right-0 top-1/2 h-1 mt-8">
-          {sortedEvents.map((event, index) => {
-            const position = `${(index / (events.length - 1)) * 100}%`;
-            return (
-              <div
-                key={`date-${event.id}`}
-                className="absolute -ml-8 text-xs font-medium text-gray-500"
-                style={{ left: position }}
-              >
-                {event.date}
+        <CardContent>
+          <div className="flex items-center justify-between mb-4">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              onClick={handlePrev}
+              className="flex items-center"
+            >
+              <ChevronLeft className="h-4 w-4 mr-1" />
+              Previous
+            </Button>
+            <div className="text-sm font-medium">
+              Event {currentIndex + 1} of {events.length}
+            </div>
+            <Button 
+              variant="outline" 
+              size="sm" 
+              onClick={handleNext}
+              className="flex items-center"
+            >
+              Next
+              <ChevronRight className="h-4 w-4 ml-1" />
+            </Button>
+          </div>
+          
+          <div className="relative">
+            {currentEvent.imageUrl && (
+              <div className="relative h-48 md:h-64 mb-4 overflow-hidden rounded-md">
+                <img 
+                  src={currentEvent.imageUrl} 
+                  alt={currentEvent.title} 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                  <div className="flex items-center text-white">
+                    <Clock className="h-4 w-4 mr-1" />
+                    <span className="text-sm font-medium">{currentEvent.date}</span>
+                  </div>
+                </div>
               </div>
-            );
-          })}
-        </div>
+            )}
+            
+            {!currentEvent.imageUrl && (
+              <div className="flex items-center mb-2 text-primary">
+                <Clock className="h-4 w-4 mr-1" />
+                <span className="text-sm font-medium">{currentEvent.date}</span>
+              </div>
+            )}
+            
+            <h3 className="text-xl font-bold mb-2">{currentEvent.title}</h3>
+            
+            <div className={`prose prose-sm max-w-none ${isExpanded ? '' : 'line-clamp-3'}`}>
+              <p>{currentEvent.description}</p>
+            </div>
+            
+            {currentEvent.description.length > 150 && (
+              <Button 
+                variant="link" 
+                size="sm" 
+                onClick={toggleExpand} 
+                className="mt-2 p-0 h-auto"
+              >
+                {isExpanded ? 'Show less' : 'Show more'}
+              </Button>
+            )}
+          </div>
+        </CardContent>
         
-        {/* Expand/Collapse button */}
-        <button 
-          className="absolute bottom-1 right-1 text-xs text-primary-500 hover:text-primary-700"
-          onClick={() => setZoomed(!zoomed)}
-        >
-          {zoomed ? 'Collapse' : 'Expand'}
-        </button>
-      </div>
-      
-      {/* Event detail */}
-      {activeEvent && (
-        <Card className="mt-8">
-          <CardHeader>
-            <CardTitle className="flex justify-between items-center">
-              <span>{getActiveEvent()?.title}</span>
-              <span className="text-sm font-normal text-gray-500">{getActiveEvent()?.date}</span>
-            </CardTitle>
-            <CardDescription>
-              {getActiveEvent()?.description}
-            </CardDescription>
-          </CardHeader>
-          {getActiveEvent()?.imageUrl && (
-            <CardContent>
-              <img 
-                src={getActiveEvent()?.imageUrl} 
-                alt={getActiveEvent()?.title}
-                className="w-full h-auto rounded-md"
-              />
-            </CardContent>
-          )}
-        </Card>
-      )}
+        <CardFooter className="pt-0">
+          <div className="w-full bg-gray-200 rounded-full h-1.5 mb-1">
+            <div 
+              className="bg-primary h-1.5 rounded-full" 
+              style={{ width: `${((currentIndex + 1) / events.length) * 100}%` }}
+            ></div>
+          </div>
+        </CardFooter>
+      </Card>
     </div>
   );
 };
