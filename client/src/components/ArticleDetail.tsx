@@ -7,6 +7,7 @@ import DidYouKnow from "./DidYouKnow";
 import QuizSection from "./QuizSection";
 import Sources from "./Sources";
 import ArticleAIControls from "./ArticleAIControls";
+import ArticleSummary from "./ArticleSummary";
 import { useToast } from "@/hooks/use-toast";
 
 interface ArticleDetailProps {
