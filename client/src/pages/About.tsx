@@ -75,10 +75,10 @@ const About = () => {
                   <Avatar className="h-24 w-24 bg-primary-100">
                     <AvatarFallback className="text-primary-600 text-xl font-medium">SR</AvatarFallback>
                   </Avatar>
-                  <h3 className="mt-4 text-xl font-bold">Dr. Sofia Rodriguez</h3>
-                  <p className="text-sm text-gray-500">Anthropologist & Pre-Columbian Specialist</p>
+                  <h3 className="mt-4 text-xl font-bold">Ciaran York</h3>
+                  <p className="text-sm text-gray-500">Middle School Student, California</p>
                   <p className="mt-4 text-gray-600 text-center">
-                    Sofia is an anthropologist whose research focuses on pre-Columbian mathematics, astronomy, and cultural practices of Mesoamerican civilizations.
+                    Ciaran is a middle school student from California with a passion for history and educational content creation.
                   </p>
                 </div>
               </CardContent>

@@ -8,14 +8,14 @@ export const articles: Article[] = [
     description: "Discover how the ancient Egyptians built these magnificent structures over 4,500 years ago with simple tools but incredible engineering skills.",
     content: `
       <p>Have you ever stood before something so huge you had to tilt your head all the way back just to see the top? 🤩 Standing on the Giza plateau, you'd definitely feel tiny next to the pyramids! 😮 The Great Pyramid of Khufu was the tallest thing humans built for over 3,800 years! 🏆 But everyone always wonders: how in the world did they build these massive structures? 🤔</p>
-      
+
       <p>Guess what? Those pyramids weren't built by slaves like in the movies! 🎬 Archaeologists found evidence that skilled workers constructed them instead. ✅ These dedicated workers organized into teams and worked in shifts throughout the year. 👷‍♂️ They worked extra hard during the Nile's yearly flood when farmers couldn't work in their fields. 💦</p>
-      
+
       <h3>Engineering Marvels</h3>
       <p>Can you believe the Great Pyramid's base is level within just 2.1 centimeters? 📏 That's super precise! 🎯 The sides perfectly line up with north, south, east, and west with amazing accuracy. 🧭 They achieved this using simple tools like plumb bobs, square levels, and measuring ropes. 🧵</p>
-      
+
       <p>Workers cut the stone blocks using copper chisels and hard stone balls. 🪨 They moved the blocks using boats when possible and sledges over land. 🚢 Teams of workers then pulled and lifted the blocks into place using ramps, levers, and other simple machines. 💪</p>
-      
+
       <h3>Cultural Significance</h3>
       <p>The pyramids weren't just fancy tombs - they were super important religious monuments. ⛪ According to ancient Egyptian beliefs, the pyramid shape represented the first mound of earth that rose from the waters at the beginning of time. 🌊 They also served as a stairway for the pharaoh to climb up to the stars after death. ✨</p>
     `,
@@ -101,17 +101,17 @@ export const articles: Article[] = [
     description: "Explore how Ancient Greece's political system established democratic principles we still use today, from direct citizen participation to representative government.",
     content: `
       <p>Did you know that many of our ideas about government come from people who lived over 2,500 years ago? 🤯 Ancient Athens, which developed democracy around 508 BCE under Cleisthenes, created a political system that would change the world forever. 👑 Their government structure with citizen participation and equal rights even inspired the people who wrote the American Constitution! 📜</p>
-      
+
       <h3>Birth of Democracy</h3>
       <p>Maybe the coolest thing the Greeks figured out was how to give power directly to the citizens. 💪 The word "democracy" itself comes from Greek words "demos" (people) and "kratos" (power) - literally meaning "people power"! 👀</p>
-      
+
       <p>Athens had an assembly called the Ekklesia where all male citizens could participate, vote on laws, and make decisions for the city-state. 🗳️ They also had a Council of 500 citizens chosen by lot and courts where large juries of citizens would decide cases. 🛑</p>
-      
+
       <h3>Limitations of Ancient Democracy</h3>
       <p>Even with their groundbreaking system, Greek democracy had some major problems. 😢 Only free adult men who were citizens could participate - which excluded women, slaves, and foreign residents. This meant only about 10-20% of the population actually had political rights. 👑</p>
-      
+
       <p>The story of Athens teaches us important lessons about democracy. 📚 Things like citizen education, participation, and protection against tyranny were all important foundations that still matter today. 💔</p>
-      
+
       <h3>Legacy in Modern Governance</h3>
       <p>Greek democratic ideas are everywhere in modern governments! 🌍 Concepts like citizen equality under law, the importance of debate and deliberation, and the right of citizens to determine their own laws all have roots in Greek ideas. 🌱 Even government symbols and architecture—like columns and domes—were borrowed from Greece by many modern nations. 🏛️</p>
     `,
@@ -191,23 +191,23 @@ export const articles: Article[] = [
     description: "Learn about the historic event that transformed California and brought people from all over the world seeking fortune and a new life.",
     content: `
       <p>Imagine finding something shiny in a stream that could make you rich overnight! 🤩 That's exactly what happened to James W. Marshall in January 1848 when he spotted gold flakes while building a sawmill along the American River in California. ✨ This amazing discovery triggered one of the biggest people movements in American history and totally transformed California forever! 🌟</p>
-      
+
       <h3>Gold Fever Spreads</h3>
       <p>Word about the gold discovery traveled pretty slowly at first. 🐌 But by 1849, thousands of hopeful gold-seekers (nicknamed "forty-niners") started pouring in from across America and around the world! 🌎 They came by ship around South America, across Panama, or by wagon train across the continent. 🚂</p>
-      
+
       <p>San Francisco exploded from a tiny settlement of about 200 people in 1846 to a booming city of around 36,000 by 1852! 📈 Towns with fun names like Rough and Ready, Hangtown, and Poker Flat popped up overnight throughout the hills. 🏠</p>
-      
+
       <h3>Life in the Goldfields</h3>
       <p>Looking for gold was super hard and dangerous work. ⛏️ The first forty-niners used simple techniques like panning, where they swirled river water in a shallow pan to separate gold from sand and gravel. 💦 As the easy-to-find gold disappeared, miners had to develop more complicated methods like sluice boxes, hydraulic mining, and digging deep underground. 🕳️</p>
-      
+
       <p>Most miners lived in tents or rough cabins without many comforts. 🏕️ Food, tools, and basic supplies cost a fortune because everything had to be shipped from far away. 💰 Many miners spent every penny they earned just to survive, and most never actually got rich. 😢</p>
-      
+
       <h3>A Diverse Population</h3>
       <p>The Gold Rush brought people from all over the world together! 🌏 Miners came from Mexico, Chile, China, Australia, Europe, and the eastern United States. 🧳 This created one of America's first truly multicultural regions, though sadly there was also a lot of discrimination and conflict. 👥</p>
-      
+
       <h3>California Transformed</h3>
       <p>The Gold Rush changed California forever! 🔄 It helped California become a state in 1850 and led to the building of roads, schools, churches, and other important buildings. 🏫 The huge population boom created a need for food, resulting in California's first farms and ranches. 🚜</p>
-      
+
       <p>While the Gold Rush eventually ended as gold became harder to find, its effects are still felt in California's diverse population, entrepreneurial spirit, and continuing growth. 🌱</p>
     `,
     imageUrl: "https://images.unsplash.com/photo-1571407509209-73d3e4a45892?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
@@ -286,18 +286,18 @@ export const articles: Article[] = [
     description: "The Great Sphinx of Giza has guarded the pyramids for thousands of years. Learn about its origins and the mysteries that still surround it.",
     content: `
       <p>Have you ever seen a creature that's part human, part lion? 🦁 The Great Sphinx of Giza is exactly that – a huge statue with a human head and a lion's body! 🤩 This massive guardian has been watching over the pyramids for thousands of years and still holds many secrets. 🔍</p>
-      
+
       <h3>An Ancient Marvel</h3>
       <p>The Sphinx is ENORMOUS! 😮 At 241 feet long and 66 feet high, it's the largest statue carved from a single piece of stone in the whole world! 🌍 It faces directly from west to east, perfectly lining up with the sunrise on certain special days. 🌅</p>
-      
+
       <p>Most experts think the Sphinx was built around 2500 BCE during the reign of Pharaoh Khafre (that's probably his face on it!). 👑 But some researchers have different ideas! 🤔 They point to interesting water erosion patterns that might suggest it was built during a much wetter time, thousands of years earlier than we thought! 💧</p>
-      
+
       <h3>Lost Nose and Missing Beard</h3>
       <p>Did you know the Sphinx wasn't always missing its nose? 👃 Despite what movies might show, Napoleon's soldiers didn't shoot it off. ❌ Archaeological evidence suggests it was actually damaged in the 14th century by someone who thought the monument was idolatrous. 📜 The Sphinx also once had a magnificent royal beard - pieces of it are now sitting in museums in London and Cairo! 🧔</p>
-      
+
       <h3>Hidden Chambers?</h3>
       <p>Here's where it gets super exciting! 🤫 Modern technology has detected mysterious empty spaces underneath the Sphinx! 📡 While some of these are probably just natural holes in the limestone, archaeologists are still investigating whether some might be human-made chambers. 👷‍♀️ Could there be undiscovered treasures or historical records hidden beneath this ancient guardian? 💎</p>
-      
+
       <p>Between the Sphinx's giant paws stands a stone tablet called the Dream Stela. 💭 It tells the story of how the Sphinx appeared to Pharaoh Thutmose IV in a dream, promising him the throne if he would dig the monument out from the sand that had buried much of it. 👑 Some wonder if this ancient tablet might contain clues to even more Sphinx secrets! 🗝️</p>
     `,
     imageUrl: "https://images.unsplash.com/photo-1590102389740-b48e86dbd761?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
@@ -361,20 +361,20 @@ export const articles: Article[] = [
     description: "Between the Tigris and Euphrates rivers, humanity's first cities emerged with remarkable innovations in writing, law, and architecture.",
     content: `
       <p>Have you ever wondered where things like writing, cities, and organized government first began? 🤔 Look no further than Mesopotamia - a name that means "between rivers" in Greek! 🌊 In the fertile valley between the Tigris and Euphrates rivers (in modern-day Iraq), humans first changed from wandering hunter-gatherers to settled farmers around 10,000 BCE. 🌱</p>
-      
+
       <h3>The Birth of Writing</h3>
       <p>One of Mesopotamia's most amazing gifts to humanity was the invention of writing! ✍️ Around 3400 BCE, the Sumerians developed cuneiform script—starting with simple picture symbols for counting things, then evolving into a complex system that could express abstract ideas and record stories. 📝</p>
-      
+
       <p>The Epic of Gilgamesh, one of the oldest written stories ever found, comes from this region! 📚 It even includes a great flood story that's actually older than the biblical story of Noah by more than a thousand years! 🌧️</p>
-      
+
       <h3>Laws and Governance</h3>
       <p>Have you heard of the Code of Hammurabi? 📜 Created around 1754 BCE, it's one of the earliest and most complete sets of laws we've ever found! 👨‍⚖️ Its 282 laws covered everything from family rights to professional standards and punishments for crimes. 🏛️</p>
-      
+
       <p>The famous saying "an eye for an eye" actually comes from this ancient code! 👁️ It was meant to create fair punishments rather than allowing endless revenge between families. ⚖️</p>
-      
+
       <h3>Technological Innovations</h3>
       <p>Mesopotamian engineers were super creative problem-solvers! 🔧 They developed amazing irrigation systems that turned dry land into productive farmland where crops could grow. 🌾 They invented the wheel around 3500 BCE, completely changing transportation and pottery-making forever! 🛞</p>
-      
+
       <p>Have you seen pictures of ziggurats? 🏙️ These massive stepped temples were architectural wonders that influenced sacred buildings around the world for thousands of years! 🕌</p>
     `,
     imageUrl: "https://images.unsplash.com/photo-1570870802499-f12b24252110?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
@@ -452,27 +452,27 @@ export const articles: Article[] = [
     description: "Take a journey through the different regions of the United States and discover what makes each area special and unique.",
     content: `
       <p>Did you know the United States is like a giant puzzle made up of 50 unique pieces? 🧩 From snowy mountains to sunny beaches, America has an amazing variety of landscapes, cultures, and histories! 🏔️ Let's take a fun trip across the country to discover what makes each region special! 🚐</p>
-      
+
       <h3>The Northeast</h3>
       <p>The Northeast includes states like Massachusetts, New York, and Pennsylvania. 🗽 This is where the American Revolution began, so you'll find tons of cool historical sites here! 🇺🇸 The Northeast has gorgeous fall leaves that turn bright red and orange, busy cities like New York and Boston, and important industries like finance and education. 🍁</p>
-      
+
       <p>In New England (Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, and Connecticut), you'll discover charming coastal towns, yummy maple syrup farms, and some of America's oldest schools and colleges. 🏫</p>
-      
+
       <h3>The South</h3>
       <p>The Southern states include Virginia, North Carolina, South Carolina, Georgia, Florida, Alabama, Mississippi, Louisiana, and others. 🌴 The South is famous for its friendly "y'all come back now" hospitality, mouth-watering food like barbecue and fried chicken, and important civil rights history. 🍗</p>
-      
+
       <p>Florida's Everglades, Louisiana's swampy bayous, and the misty Great Smoky Mountains are some of the South's natural wonders. 🐊 The region has an incredible musical heritage too, with blues, jazz, country, and rock 'n' roll all starting here! 🎸</p>
-      
+
       <h3>The Midwest</h3>
       <p>Often called America's Heartland, the Midwest includes states like Ohio, Michigan, Illinois, Wisconsin, Minnesota, Iowa, and others. ❤️ This region is known for its super friendly people, farming, and the Great Lakes, which contain 20% of the world's freshwater! 💧</p>
-      
+
       <p>Chicago, one of America's biggest cities, is located in the Midwest, along with important car-making centers in Michigan. 🚗 The Midwest grows much of the nation's corn, wheat, and soybeans in its fertile farmlands - that's why it's sometimes called America's breadbasket! 🌽</p>
-      
+
       <h3>The West</h3>
       <p>The Western states include California, Oregon, Washington, Colorado, Nevada, Utah, and others. 🏄‍♀️ This region has mind-blowing geographic diversity, from the Pacific coastline to the Rocky Mountains, and from hot deserts to giant redwood forests! 🌲</p>
-      
+
       <p>The West is home to many famous national parks like Yellowstone, Yosemite, and the Grand Canyon. 🏞️ California, the state with the most people, has such a huge economy that if it were its own country, it would be one of the richest in the world! 💰</p>
-      
+
       <h3>Alaska and Hawaii</h3>
       <p>These non-contiguous states (meaning they don't touch the other 48) add even more variety to America! 🗺️ Alaska, the biggest state by area, has magnificent wilderness, wildlife, and mountains, including Denali, North America's highest peak. 🐻 Hawaii, a volcanic island chain in the Pacific, has a tropical climate and a unique cultural heritage blending native Hawaiian, Asian, and Western influences. 🌺</p>
     `,
@@ -556,7 +556,7 @@ export const getArticleById = (id: string): Article | undefined => {
 export const getRelatedArticles = (articleId: string): Article[] => {
   const article = getArticleById(articleId);
   if (!article || !article.relatedArticles) return [];
-  
+
   return article.relatedArticles
     .map(id => getArticleById(id))
     .filter((article): article is Article => article !== undefined);
@@ -564,13 +564,13 @@ export const getRelatedArticles = (articleId: string): Article[] => {
 
 export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'): Article[] => {
   query = query.toLowerCase();
-  
+
   return articles.filter(article => {
     // Filter by age level if specified
     if (ageLevel !== 'All' && article.ageLevel !== ageLevel) {
       return false;
     }
-    
+
     // Search in title, description, and content
     return (
       article.title.toLowerCase().includes(query) ||
