@@ -1,23 +1,39 @@
-import { useState } from "react";
+import { useState, createContext, useContext } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, Bell, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
+const ThemeContext = createContext('light');
+
+const useTheme = () => {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
+  return { theme, toggleTheme };
+};
+
+
 const Header = () => {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const isActive = (path: string) => location === path;
 
   return (
-    <header className="bg-white shadow-sm">
+    <header className={`bg-${theme}-500 shadow-sm`}> {/* Apply theme to background */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <svg
-                className="h-8 w-auto text-primary-600"
+                className={`h-8 w-auto text-${theme === 'light' ? 'primary-600' : 'white'}`}  {/*Apply theme to SVG color*/}
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +61,7 @@ const Header = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span className="ml-2 text-xl font-bold text-primary-600">Social Studies Corner</span>
+              <span className={`ml-2 text-xl font-bold text-${theme === 'light' ? 'primary-600' : 'white'}`}>Social Studies Corner</span> {/*Apply theme to text color*/}
             </div>
             <nav className="hidden sm:ml-8 sm:flex sm:space-x-8" aria-label="Main Navigation">
               <Link href="/" className={`${isActive('/') ? 'border-primary-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'} inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}>
@@ -63,15 +79,15 @@ const Header = () => {
             </nav>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <Button variant="ghost" size="icon" className="text-gray-400 hover:text-gray-500">
+            <Button variant="ghost" size="icon" className={`text-${theme === 'light' ? 'gray-400' : 'white'} hover:text-${theme === 'light' ? 'gray-500' : 'gray-200'}`}> {/*Apply theme to button color*/}
               <span className="sr-only">View notifications</span>
               <Bell className="h-5 w-5" />
             </Button>
             <div className="ml-3 relative">
               <Button variant="ghost" size="icon" className="flex text-sm rounded-full focus:outline-none">
                 <span className="sr-only">Open user menu</span>
-                <Avatar className="h-8 w-8 bg-primary-100">
-                  <AvatarFallback className="text-primary-600">
+                <Avatar className={`h-8 w-8 bg-${theme === 'light' ? 'primary-100' : 'gray-700'}`}> {/*Apply theme to avatar background*/}
+                  <AvatarFallback className={`text-${theme === 'light' ? 'primary-600' : 'white'}`}>
                     <User className="h-4 w-4" />
                   </AvatarFallback>
                 </Avatar>
@@ -82,12 +98,21 @@ const Header = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="inline-flex items-center justify-center rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
+              className={`inline-flex items-center justify-center rounded-md text-${theme === 'light' ? 'gray-400' : 'white'} hover:text-${theme === 'light' ? 'gray-500' : 'gray-200'} hover:bg-${theme === 'light' ? 'gray-100' : 'gray-800'}`} {/*Apply theme to mobile menu button*/}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>
               <Menu className="h-6 w-6" />
             </Button>
+          </div>
+          <div className="hidden md:flex items-center space-x-4"> {/* Added theme toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-md hover:bg-muted"
+              aria-label="Toggle theme"
+            >
+              {theme === 'light' ? '🌙' : '☀️'}
+            </button>
           </div>
         </div>
       </div>
