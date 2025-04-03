@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'wouter';
 import ArticleEditor from '@/components/ArticleEditor';
+import ArticleCodeEditor from '@/components/ArticleCodeEditor';
 import { Article } from '@/types';
 import { getArticleBySlug } from '@/data/articles';
 import { getArticlesFromLocalStorage } from '@/utils/articleUtils';
@@ -14,6 +15,7 @@ type EditArticlePageProps = {
 const EditArticlePage = ({ params }: EditArticlePageProps) => {
   const [article, setArticle] = useState<Article | undefined>(undefined);
   const [isLoading, setIsLoading] = useState(true);
+  const [isCodeEditorMode, setIsCodeEditorMode] = useState(false);
   const [, setLocation] = useLocation();
 
   useEffect(() => {
@@ -42,6 +44,11 @@ const EditArticlePage = ({ params }: EditArticlePageProps) => {
     fetchArticle();
   }, [params.slug, setLocation]);
 
+  // Toggle between visual editor and code editor
+  const toggleEditorMode = () => {
+    setIsCodeEditorMode(!isCodeEditorMode);
+  };
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -62,8 +69,18 @@ const EditArticlePage = ({ params }: EditArticlePageProps) => {
     );
   }
 
-  return (
-    <ArticleEditor article={article} isNew={false} />
+  // Render either the code editor or the visual editor based on the mode
+  return isCodeEditorMode ? (
+    <ArticleCodeEditor 
+      article={article} 
+      onSwitchToVisualEditor={toggleEditorMode} 
+    />
+  ) : (
+    <ArticleEditor 
+      article={article} 
+      isNew={false} 
+      onSwitchToCodeEditor={toggleEditorMode}
+    />
   );
 };
 
