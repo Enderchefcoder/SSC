@@ -106,13 +106,11 @@ const ArticleCard = ({ article, compact = false }: ArticleCardProps) => {
               </span>
             ))}
           </p>
-          <Link href={`/article/${article.slug}`}>
-            <a className="block mt-2">
-              <p className="text-xl font-semibold text-gray-900 font-serif">{article.title}</p>
-              {!compact && (
-                <p className="mt-3 text-base text-gray-500 line-clamp-3">{article.description}</p>
-              )}
-            </a>
+          <Link href={`/article/${article.slug}`} className="block mt-2">
+            <p className="text-xl font-semibold text-gray-900 font-serif">{article.title}</p>
+            {!compact && (
+              <p className="mt-3 text-base text-gray-500 line-clamp-3">{article.description}</p>
+            )}
           </Link>
         </div>
         {!compact && (

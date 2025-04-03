@@ -75,38 +75,28 @@ const Footer = () => {
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   <li>
-                    <Link href="/articles?tag=World+History">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/articles?tag=World+History" className="text-base text-gray-300 hover:text-white">
                         World History
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/articles?tag=US+History">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/articles?tag=US+History" className="text-base text-gray-300 hover:text-white">
                         US History
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/articles?tag=Geography">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/articles?tag=Geography" className="text-base text-gray-300 hover:text-white">
                         Geography
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/articles?tag=Civics">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/articles?tag=Civics" className="text-base text-gray-300 hover:text-white">
                         Civics & Government
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/articles?tag=Economics">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/articles?tag=Economics" className="text-base text-gray-300 hover:text-white">
                         Economics
-                      </a>
                     </Link>
                   </li>
                 </ul>
@@ -117,38 +107,28 @@ const Footer = () => {
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   <li>
-                    <Link href="/resources?type=Worksheet">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/resources?type=Worksheet" className="text-base text-gray-300 hover:text-white">
                         Lesson Plans
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/resources?type=Worksheet">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/resources?type=Worksheet" className="text-base text-gray-300 hover:text-white">
                         Worksheets
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/resources?type=Virtual+Field+Trip">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/resources?type=Virtual+Field+Trip" className="text-base text-gray-300 hover:text-white">
                         Virtual Field Trips
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/resources?type=Interactive+Timeline">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/resources?type=Interactive+Timeline" className="text-base text-gray-300 hover:text-white">
                         Interactive Timelines
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/resources?type=Student+Contributions">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/resources?type=Student+Contributions" className="text-base text-gray-300 hover:text-white">
                         Student Contributions
-                      </a>
                     </Link>
                   </li>
                 </ul>
@@ -161,31 +141,23 @@ const Footer = () => {
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   <li>
-                    <Link href="/articles?level=Elementary">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/articles?level=Elementary" className="text-base text-gray-300 hover:text-white">
                         Elementary School
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/articles?level=Middle+School">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/articles?level=Middle+School" className="text-base text-gray-300 hover:text-white">
                         Middle School
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/articles?level=High+School">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/articles?level=High+School" className="text-base text-gray-300 hover:text-white">
                         High School
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/articles?tag=Homeschool">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/articles?tag=Homeschool" className="text-base text-gray-300 hover:text-white">
                         Homeschool
-                      </a>
                     </Link>
                   </li>
                 </ul>
@@ -196,31 +168,23 @@ const Footer = () => {
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   <li>
-                    <Link href="/about">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/about" className="text-base text-gray-300 hover:text-white">
                         Our Team
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about#contact">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/about#contact" className="text-base text-gray-300 hover:text-white">
                         Contact Us
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about#privacy">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/about#privacy" className="text-base text-gray-300 hover:text-white">
                         Privacy Policy
-                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about#terms">
-                      <a className="text-base text-gray-300 hover:text-white">
+                    <Link href="/about#terms" className="text-base text-gray-300 hover:text-white">
                         Terms of Service
-                      </a>
                     </Link>
                   </li>
                 </ul>

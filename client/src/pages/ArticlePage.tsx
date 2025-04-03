@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
 import ArticleDetail from "@/components/ArticleDetail";
 import RelatedArticles from "@/components/RelatedArticles";
+import ReadingProgressBar from "@/components/ReadingProgressBar";
 import Newsletter from "@/components/Newsletter";
 import { getArticleBySlug, getRelatedArticles } from "@/data/articles";
 import { Article } from "@/types";
@@ -71,6 +72,7 @@ const ArticlePage = ({ params }: ArticlePageProps) => {
 
   return (
     <div className={isPrintMode ? "print-mode" : ""}>
+      {!isPrintMode && <ReadingProgressBar articleId={article.id} />}
       <ArticleDetail article={article} isPrintMode={isPrintMode} />
       
       {!isPrintMode && (
