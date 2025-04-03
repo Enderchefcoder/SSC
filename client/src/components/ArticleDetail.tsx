@@ -16,6 +16,7 @@ interface ArticleDetailProps {
 const ArticleDetail = ({ article, isPrintMode = false }: ArticleDetailProps) => {
   const { toast } = useToast();
   const contentRef = useRef<HTMLDivElement>(null);
+  const [articleContent, setArticleContent] = useState(article.content);
   
   useEffect(() => {
     if (isPrintMode) {
@@ -55,6 +56,14 @@ const ArticleDetail = ({ article, isPrintMode = false }: ArticleDetailProps) => 
 
   return (
     <div className="bg-white overflow-hidden">
+      {!isPrintMode && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ArticleAIControls 
+            content={articleContent} 
+            onContentChange={setArticleContent} 
+          />
+        </div>
+      )}
       <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"></div>
         <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
