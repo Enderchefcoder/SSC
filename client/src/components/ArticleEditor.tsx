@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'wouter';
-import { Article, AgeLevel, Tag } from '@/types';
+import { Article, AgeLevel, Tag, QuizQuestion } from '@/types';
 import { 
   Card, 
   CardHeader, 
@@ -44,10 +44,15 @@ const ArticleEditor = ({ article, isNew = false, onSwitchToCodeEditor }: Article
   const [tags, setTags] = useState<Tag[]>(article?.tags || []);
   const [newTagName, setNewTagName] = useState('');
   const [newTagColor, setNewTagColor] = useState('blue');
-  const [discussionQuestions, setDiscussionQuestions] = useState<string[]>(
-    article?.discussionQuestions || []
+  const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[]>(
+    article?.quiz || []
   );
-  const [newQuestion, setNewQuestion] = useState('');
+  const [newQuizQuestion, setNewQuizQuestion] = useState({
+    question: '',
+    options: ['', '', '', ''],
+    correctAnswer: 0,
+    explanation: ''
+  });
   // We'll include a custom interface to handle the didYouKnowFact field
   interface FormDataType extends Partial<Article> {
     didYouKnowFact?: string;
@@ -74,7 +79,7 @@ const ArticleEditor = ({ article, isNew = false, onSwitchToCodeEditor }: Article
         bio: 'Social studies educator with a passion for making history accessible to young learners.'
       },
       tags: [],
-      discussionQuestions: [],
+      quiz: [],
       didYouKnowFact: ''
     }
   );
@@ -110,17 +115,52 @@ const ArticleEditor = ({ article, isNew = false, onSwitchToCodeEditor }: Article
     setTags(newTags);
   };
 
-  const addQuestion = () => {
-    if (newQuestion.trim()) {
-      setDiscussionQuestions([...discussionQuestions, newQuestion.trim()]);
-      setNewQuestion('');
+  const addQuizQuestion = () => {
+    if (newQuizQuestion.question.trim() && newQuizQuestion.options.filter(o => o.trim()).length >= 2) {
+      setQuizQuestions([...quizQuestions, { ...newQuizQuestion }]);
+      setNewQuizQuestion({
+        question: '',
+        options: ['', '', '', ''],
+        correctAnswer: 0,
+        explanation: ''
+      });
     }
   };
 
-  const removeQuestion = (index: number) => {
-    const newQuestions = [...discussionQuestions];
+  const removeQuizQuestion = (index: number) => {
+    const newQuestions = [...quizQuestions];
     newQuestions.splice(index, 1);
-    setDiscussionQuestions(newQuestions);
+    setQuizQuestions(newQuestions);
+  };
+  
+  const handleQuizQuestionChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setNewQuizQuestion({
+      ...newQuizQuestion,
+      question: e.target.value
+    });
+  };
+  
+  const handleOptionChange = (index: number, value: string) => {
+    const newOptions = [...newQuizQuestion.options];
+    newOptions[index] = value;
+    setNewQuizQuestion({
+      ...newQuizQuestion,
+      options: newOptions
+    });
+  };
+  
+  const handleCorrectAnswerChange = (index: number) => {
+    setNewQuizQuestion({
+      ...newQuizQuestion,
+      correctAnswer: index
+    });
+  };
+
+  const handleExplanationChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setNewQuizQuestion({
+      ...newQuizQuestion,
+      explanation: e.target.value
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -135,7 +175,7 @@ const ArticleEditor = ({ article, isNew = false, onSwitchToCodeEditor }: Article
       const completeArticle: Article = {
         ...(formData as Article),
         tags,
-        discussionQuestions,
+        quiz: quizQuestions,
         didYouKnow
       };
 
@@ -172,7 +212,7 @@ const ArticleEditor = ({ article, isNew = false, onSwitchToCodeEditor }: Article
       const completeArticle: Article = {
         ...(formData as Article),
         tags,
-        discussionQuestions,
+        quiz: quizQuestions,
         didYouKnow
       };
 
@@ -401,38 +441,102 @@ const ArticleEditor = ({ article, isNew = false, onSwitchToCodeEditor }: Article
               </div>
 
               <div className="space-y-2">
-                <Label>Discussion Questions</Label>
-                <div className="space-y-2 mb-2">
-                  {discussionQuestions.map((question, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <div className="bg-gray-100 p-2 rounded flex-1">
-                        {question}
+                <Label>Quiz Questions</Label>
+                <div className="space-y-4 mb-4">
+                  {quizQuestions.map((question, index) => (
+                    <div key={index} className="bg-gray-50 p-3 rounded-md border">
+                      <div className="flex justify-between">
+                        <h4 className="font-medium">Question {index + 1}</h4>
+                        <Button 
+                          type="button" 
+                          variant="ghost" 
+                          onClick={() => removeQuizQuestion(index)}
+                          size="sm"
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </Button>
                       </div>
-                      <Button 
-                        type="button" 
-                        variant="ghost" 
-                        onClick={() => removeQuestion(index)}
-                        size="sm"
-                      >
-                        <Trash2 className="h-4 w-4" />
-                      </Button>
+                      <p className="my-2">{question.question}</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
+                        {question.options.map((option, optIndex) => (
+                          <div 
+                            key={optIndex} 
+                            className={`p-2 rounded flex items-center ${
+                              optIndex === question.correctAnswer 
+                                ? 'bg-green-100 border border-green-300' 
+                                : 'bg-gray-100'
+                            }`}
+                          >
+                            {optIndex === question.correctAnswer && (
+                              <Check className="h-4 w-4 mr-2 text-green-600" />
+                            )}
+                            {option}
+                          </div>
+                        ))}
+                      </div>
+                      {question.explanation && (
+                        <div className="mt-2 text-sm text-gray-600">
+                          <strong>Explanation:</strong> {question.explanation}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
-                <div className="flex gap-2">
-                  <Input
-                    value={newQuestion}
-                    onChange={(e) => setNewQuestion(e.target.value)}
-                    placeholder="Add a discussion question"
-                    className="flex-1"
-                  />
-                  <Button 
-                    type="button" 
-                    variant="outline" 
-                    onClick={addQuestion}
-                  >
-                    <Plus className="h-4 w-4" />
-                  </Button>
+                <div className="bg-gray-50 p-4 rounded-md border">
+                  <h4 className="font-medium mb-2">Add New Question</h4>
+                  <div className="space-y-3">
+                    <div>
+                      <Label htmlFor="question">Question</Label>
+                      <Input
+                        id="question"
+                        value={newQuizQuestion.question}
+                        onChange={handleQuizQuestionChange}
+                        placeholder="Enter the question"
+                      />
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {newQuizQuestion.options.map((option, index) => (
+                        <div key={index} className="space-y-1">
+                          <div className="flex items-center justify-between">
+                            <Label htmlFor={`option-${index}`}>Option {index + 1}</Label>
+                            <div className="flex items-center space-x-2">
+                              <Label htmlFor={`correct-${index}`} className="text-xs">Correct</Label>
+                              <input
+                                type="radio"
+                                id={`correct-${index}`}
+                                name="correctAnswer"
+                                checked={newQuizQuestion.correctAnswer === index}
+                                onChange={() => handleCorrectAnswerChange(index)}
+                              />
+                            </div>
+                          </div>
+                          <Input
+                            id={`option-${index}`}
+                            value={option}
+                            onChange={(e) => handleOptionChange(index, e.target.value)}
+                            placeholder={`Option ${index + 1}`}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    <div>
+                      <Label htmlFor="explanation">Explanation (optional)</Label>
+                      <Textarea
+                        id="explanation"
+                        value={newQuizQuestion.explanation}
+                        onChange={handleExplanationChange}
+                        placeholder="Explain why the correct answer is right"
+                        rows={2}
+                      />
+                    </div>
+                    <Button 
+                      type="button" 
+                      onClick={addQuizQuestion}
+                      className="w-full"
+                    >
+                      Add Question
+                    </Button>
+                  </div>
                 </div>
               </div>
 
@@ -441,55 +545,57 @@ const ArticleEditor = ({ article, isNew = false, onSwitchToCodeEditor }: Article
                 <div className="border rounded-md p-2 bg-gray-50">
                   <p className="text-xs text-gray-500 mb-2">
                     Use HTML tags for formatting. For example:
-                    <code className="mx-1 px-1 bg-gray-200 rounded">&lt;p&gt;Paragraph&lt;/p&gt;</code>
-                    <code className="mx-1 px-1 bg-gray-200 rounded">&lt;h3&gt;Heading&lt;/h3&gt;</code>
+                    <code className="mx-1 px-1 bg-gray-200 rounded">
+                      &lt;h2&gt;Heading&lt;/h2&gt;
+                    </code>
+                    for headings,
+                    <code className="mx-1 px-1 bg-gray-200 rounded">
+                      &lt;p&gt;Paragraph&lt;/p&gt;
+                    </code>
+                    for paragraphs, etc.
                   </p>
+                  <Textarea
+                    id="content"
+                    name="content"
+                    value={formData.content || ''}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter the main content of the article"
+                    rows={15}
+                    className="font-mono"
+                  />
                 </div>
-                <Textarea
-                  id="content"
-                  name="content"
-                  value={formData.content || ''}
-                  onChange={handleChange}
-                  required
-                  placeholder="Article content in HTML format"
-                  rows={12}
-                  className="font-mono text-sm"
-                />
               </div>
             </div>
             
-            <div className="flex justify-between items-center pt-4">
+            <CardFooter className="flex justify-between pt-6 px-0">
               <div>
                 <Button 
                   type="button" 
                   variant="outline" 
-                  onClick={handleDownload}
-                  className="mr-2"
+                  onClick={handleCancel}
+                  disabled={loading}
                 >
-                  <Download className="h-4 w-4 mr-2" />
-                  Download as Text
+                  Cancel
                 </Button>
                 <Button 
                   type="button" 
                   variant="outline" 
-                  onClick={handleCancel}
+                  onClick={handleDownload}
+                  disabled={loading}
+                  className="ml-2"
                 >
-                  Cancel
+                  <Download className="h-4 w-4 mr-2" />
+                  Download
                 </Button>
               </div>
-              <Button type="submit" disabled={loading}>
-                {loading ? (
-                  <>
-                    <div className="spinner mr-2" /> Saving...
-                  </>
-                ) : (
-                  <>
-                    <Check className="h-4 w-4 mr-2" />
-                    {isNew ? 'Create Article' : 'Update Article'}
-                  </>
-                )}
+              <Button 
+                type="submit" 
+                disabled={loading}
+              >
+                {loading ? 'Saving...' : isNew ? 'Create Article' : 'Update Article'}
               </Button>
-            </div>
+            </CardFooter>
           </form>
         </CardContent>
       </Card>

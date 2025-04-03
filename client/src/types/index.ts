@@ -12,6 +12,13 @@ export type Author = {
   bio?: string;
 };
 
+export type QuizQuestion = {
+  question: string;
+  options: string[];
+  correctAnswer: number;
+  explanation?: string;
+};
+
 export type Article = {
   id: string;
   title: string;
@@ -29,7 +36,7 @@ export type Article = {
   didYouKnow?: {
     fact: string;
   };
-  discussionQuestions?: string[];
+  quiz?: QuizQuestion[];
   sources?: {
     title: string;
     author?: string;

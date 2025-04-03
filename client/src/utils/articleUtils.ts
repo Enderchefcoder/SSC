@@ -94,9 +94,9 @@ export const exportArticleToText = (article: Article): string => {
     text += `DID_YOU_KNOW: ${article.didYouKnow.fact}\n`;
   }
   
-  // Discussion questions
-  if (article.discussionQuestions && article.discussionQuestions.length > 0) {
-    text += `DISCUSSION_QUESTIONS: ${article.discussionQuestions.join('|||')}\n`;
+  // Quiz questions
+  if (article.quiz && article.quiz.length > 0) {
+    text += `QUIZ: ${JSON.stringify(article.quiz)}\n`;
   }
   
   // Sources
@@ -159,9 +159,9 @@ export const importArticleFromText = (text: string): Article | null => {
       return { name, color };
     }) : [];
     
-    // Parse discussion questions
-    const questionsStr = getField('DISCUSSION_QUESTIONS: ');
-    const discussionQuestions = questionsStr ? questionsStr.split('|||') : [];
+    // Parse quiz questions
+    const quizStr = getField('QUIZ: ');
+    const quiz = quizStr ? JSON.parse(quizStr) : [];
     
     // Parse sources
     const sourcesStr = getField('SOURCES: ');
@@ -202,7 +202,7 @@ export const importArticleFromText = (text: string): Article | null => {
       tags,
       author,
       didYouKnow,
-      discussionQuestions,
+      quiz,
       sources,
       relatedArticles,
       worksheets

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Article } from "@/types";
 import DidYouKnow from "./DidYouKnow";
-import DiscussionQuestions from "./DiscussionQuestions";
+import QuizSection from "./QuizSection";
 import Sources from "./Sources";
 import { useToast } from "@/hooks/use-toast";
 
@@ -120,8 +120,8 @@ const ArticleDetail = ({ article, isPrintMode = false }: ArticleDetailProps) => 
               
               {article.didYouKnow && <DidYouKnow fact={article.didYouKnow.fact} />}
               
-              {article.discussionQuestions && article.discussionQuestions.length > 0 && (
-                <DiscussionQuestions questions={article.discussionQuestions} />
+              {article.quiz && article.quiz.length > 0 && (
+                <QuizSection questions={article.quiz} />
               )}
               
               {article.sources && article.sources.length > 0 && (
