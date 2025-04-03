@@ -63,8 +63,17 @@ const ResourcesSection = ({
         
         <div className="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {resources.map((resource) => (
-            <div key={resource.id} className="bg-gray-50 overflow-hidden shadow rounded-lg">
-              <div className="px-4 py-5 sm:p-6">
+            <div key={resource.id} className="bg-gray-50 overflow-hidden shadow rounded-lg flex flex-col">
+              {resource.imageUrl && (
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={resource.imageUrl} 
+                    alt={resource.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
+              <div className="px-4 py-5 sm:p-6 flex-1">
                 <div className="flex items-center">
                   <div className="flex-shrink-0 bg-primary-100 rounded-md p-3">
                     {getIconComponent(resource.thumbnailIcon)}
@@ -98,21 +107,27 @@ const ResourcesSection = ({
                   </p>
                 </div>
                 <div className="mt-6">
-                  <Button
-                    className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white ${getButtonColor(resource.type)} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 w-full justify-center`}
+                  <a 
+                    href={resource.downloadUrl || "#"} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
                   >
-                    {resource.type === "Virtual Field Trip" ? (
-                      <>
-                        <Video className="mr-2 h-4 w-4" />
-                        Start Virtual Tour
-                      </>
-                    ) : (
-                      <>
-                        <FileText className="mr-2 h-4 w-4" />
-                        Download {resource.type === "Worksheet" ? "PDF" : "Presentation"}
-                      </>
-                    )}
-                  </Button>
+                    <Button
+                      className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white ${getButtonColor(resource.type)} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 w-full justify-center`}
+                    >
+                      {resource.type === "Virtual Field Trip" ? (
+                        <>
+                          <Video className="mr-2 h-4 w-4" />
+                          Start Virtual Tour
+                        </>
+                      ) : (
+                        <>
+                          <FileText className="mr-2 h-4 w-4" />
+                          Download {resource.type === "Worksheet" ? "PDF" : "Presentation"}
+                        </>
+                      )}
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>

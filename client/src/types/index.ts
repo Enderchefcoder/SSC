@@ -56,6 +56,7 @@ export type Resource = {
   ageLevel: AgeLevel[];
   downloadUrl?: string;
   thumbnailIcon: string;
+  imageUrl?: string;
 };
 
 export type SearchFilters = {
