@@ -3,17 +3,17 @@ import { useLocation } from "wouter";
 import { Search, GraduationCap, BookOpen, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { AgeLevel } from "@/types";
+import { AgeLevel, AgeLevelFilter } from "@/types";
 
 type HeroProps = {
-  onSearch?: (query: string, ageLevel: AgeLevel | "All") => void;
+  onSearch?: (query: string, ageLevel: AgeLevelFilter) => void;
   showSearch?: boolean;
 };
 
 const Hero = ({ onSearch, showSearch = true }: HeroProps) => {
   const [, setLocation] = useLocation();
   const [searchQuery, setSearchQuery] = useState("");
-  const [activeFilter, setActiveFilter] = useState<AgeLevel | "All">("All");
+  const [activeFilter, setActiveFilter] = useState<AgeLevelFilter>("All");
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -91,13 +91,7 @@ const Hero = ({ onSearch, showSearch = true }: HeroProps) => {
                 <BookOpen className="mr-2 h-4 w-4" />
                 Middle School
               </Button>
-              <Button
-                onClick={() => handleFilterClick("High School")}
-                className={`inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none ${activeFilter === "High School" ? "ring-2 ring-offset-2 ring-purple-500" : ""}`}
-              >
-                <Award className="mr-2 h-4 w-4" />
-                High School
-              </Button>
+
             </div>
           </>
         )}

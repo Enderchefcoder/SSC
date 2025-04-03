@@ -12,8 +12,6 @@ const getAgeLevelClasses = (ageLevel: AgeLevel) => {
       return "bg-amber-500 text-white";
     case "Middle School":
       return "bg-indigo-500 text-white";
-    case "High School":
-      return "bg-purple-600 text-white";
     default:
       return "bg-gray-500 text-white";
   }

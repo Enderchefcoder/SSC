@@ -12,13 +12,13 @@ interface ResourcesSectionProps {
 const getIconComponent = (iconName: string) => {
   switch (iconName) {
     case "file-pdf":
-      return <FilePdf className="text-primary-600 text-xl h-6 w-6" />;
+      return <FileText className="text-primary-600 text-xl h-6 w-6" />;
     case "file-powerpoint":
-      return <FilePresentation className="text-teal-600 text-xl h-6 w-6" />;
+      return <Presentation className="text-teal-600 text-xl h-6 w-6" />;
     case "video":
       return <Video className="text-amber-600 text-xl h-6 w-6" />;
     default:
-      return <FilePdf className="text-primary-600 text-xl h-6 w-6" />;
+      return <FileText className="text-primary-600 text-xl h-6 w-6" />;
   }
 };
 
@@ -28,8 +28,6 @@ const getAgeLevelColor = (ageLevel: AgeLevel) => {
       return "bg-amber-500 text-white";
     case "Middle School":
       return "bg-indigo-500 text-white";
-    case "High School":
-      return "bg-purple-600 text-white";
     default:
       return "bg-gray-500 text-white";
   }
@@ -110,7 +108,7 @@ const ResourcesSection = ({
                       </>
                     ) : (
                       <>
-                        <FilePdf className="mr-2 h-4 w-4" />
+                        <FileText className="mr-2 h-4 w-4" />
                         Download {resource.type === "Worksheet" ? "PDF" : "Presentation"}
                       </>
                     )}

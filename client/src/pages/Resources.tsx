@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import ResourcesSection from "@/components/ResourcesSection";
 import Newsletter from "@/components/Newsletter";
 import { resources, searchResources } from "@/data/resources";
-import { AgeLevel, Resource } from "@/types";
+import { AgeLevel, AgeLevelFilter, Resource } from "@/types";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -14,7 +14,7 @@ const Resources = () => {
   const [location] = useLocation();
   const [searchResults, setSearchResults] = useState<Resource[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [ageLevel, setAgeLevel] = useState<AgeLevel | "All">("All");
+  const [ageLevel, setAgeLevel] = useState<AgeLevelFilter>("All");
   const [resourceType, setResourceType] = useState<string>("All");
   const [isSearching, setIsSearching] = useState(false);
 
@@ -22,7 +22,7 @@ const Resources = () => {
     // Parse query parameters from URL
     const params = new URLSearchParams(location.split("?")[1]);
     const queryParam = params.get("q") || "";
-    const levelParam = params.get("level") as AgeLevel || "All";
+    const levelParam = params.get("level") as AgeLevelFilter || "All";
     const typeParam = params.get("type") || "All";
     
     setSearchQuery(queryParam);
@@ -33,7 +33,7 @@ const Resources = () => {
     performSearch(queryParam, levelParam, typeParam);
   }, [location]);
 
-  const performSearch = (query: string, level: AgeLevel | "All", type: string = "All") => {
+  const performSearch = (query: string, level: AgeLevelFilter, type: string = "All") => {
     setIsSearching(true);
     
     // Simulate search delay
@@ -68,8 +68,8 @@ const Resources = () => {
   };
 
   const handleAgeLevelChange = (value: string) => {
-    setAgeLevel(value as AgeLevel | "All");
-    performSearch(searchQuery, value as AgeLevel | "All", resourceType);
+    setAgeLevel(value as AgeLevelFilter);
+    performSearch(searchQuery, value as AgeLevelFilter, resourceType);
     
     // Update URL with search parameters after state changes
     setTimeout(updateSearchParams, 0);
@@ -121,7 +121,7 @@ const Resources = () => {
             <div>
               <h3 className="text-sm font-medium text-gray-500 mb-2">Age Level</h3>
               <Tabs defaultValue={ageLevel} onValueChange={handleAgeLevelChange}>
-                <TabsList className="grid grid-cols-4">
+                <TabsList className="grid grid-cols-3">
                   <TabsTrigger value="All">All Levels</TabsTrigger>
                   <TabsTrigger value="Elementary" className="flex items-center gap-1">
                     <GraduationCap className="h-4 w-4" />
@@ -130,10 +130,6 @@ const Resources = () => {
                   <TabsTrigger value="Middle School" className="flex items-center gap-1">
                     <BookOpen className="h-4 w-4" />
                     Middle School
-                  </TabsTrigger>
-                  <TabsTrigger value="High School" className="flex items-center gap-1">
-                    <Award className="h-4 w-4" />
-                    High School
                   </TabsTrigger>
                 </TabsList>
               </Tabs>

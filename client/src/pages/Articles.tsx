@@ -3,7 +3,7 @@ import { useLocation } from "wouter";
 import Hero from "@/components/Hero";
 import ArticleCard from "@/components/ArticleCard";
 import { searchArticles } from "@/data/articles";
-import { AgeLevel, Article } from "@/types";
+import { AgeLevel, AgeLevelFilter, Article } from "@/types";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -13,14 +13,14 @@ const Articles = () => {
   const [location] = useLocation();
   const [searchResults, setSearchResults] = useState<Article[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [ageLevel, setAgeLevel] = useState<AgeLevel | "All">("All");
+  const [ageLevel, setAgeLevel] = useState<AgeLevelFilter>("All");
   const [isSearching, setIsSearching] = useState(false);
 
   useEffect(() => {
     // Parse query parameters from URL
     const params = new URLSearchParams(location.split("?")[1]);
     const queryParam = params.get("q") || "";
-    const levelParam = params.get("level") as AgeLevel || "All";
+    const levelParam = params.get("level") as AgeLevelFilter || "All";
     
     setSearchQuery(queryParam);
     setAgeLevel(levelParam);
@@ -34,7 +34,7 @@ const Articles = () => {
     }
   }, [location]);
 
-  const performSearch = (query: string, level: AgeLevel | "All") => {
+  const performSearch = (query: string, level: AgeLevelFilter) => {
     setIsSearching(true);
     
     // Simulate search delay
@@ -58,8 +58,8 @@ const Articles = () => {
   };
 
   const handleAgeLevelChange = (value: string) => {
-    setAgeLevel(value as AgeLevel | "All");
-    performSearch(searchQuery, value as AgeLevel | "All");
+    setAgeLevel(value as AgeLevelFilter);
+    performSearch(searchQuery, value as AgeLevelFilter);
     
     // Update URL with new level
     const params = new URLSearchParams();
@@ -100,7 +100,7 @@ const Articles = () => {
           
           <div className="mt-6">
             <Tabs defaultValue={ageLevel} onValueChange={handleAgeLevelChange}>
-              <TabsList className="grid grid-cols-4">
+              <TabsList className="grid grid-cols-3">
                 <TabsTrigger value="All">All Levels</TabsTrigger>
                 <TabsTrigger value="Elementary" className="flex items-center gap-1">
                   <GraduationCap className="h-4 w-4" />
@@ -109,10 +109,6 @@ const Articles = () => {
                 <TabsTrigger value="Middle School" className="flex items-center gap-1">
                   <BookOpen className="h-4 w-4" />
                   Middle School
-                </TabsTrigger>
-                <TabsTrigger value="High School" className="flex items-center gap-1">
-                  <Award className="h-4 w-4" />
-                  High School
                 </TabsTrigger>
               </TabsList>
             </Tabs>

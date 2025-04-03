@@ -1,4 +1,4 @@
-import { Article } from "@/types";
+import { Article, AgeLevelFilter } from "@/types";
 
 export const articles: Article[] = [
   {
@@ -7,40 +7,40 @@ export const articles: Article[] = [
     title: "The Great Pyramids: Wonders of the Ancient World",
     description: "Discover how the ancient Egyptians built these magnificent structures over 4,500 years ago with simple tools but incredible engineering skills.",
     content: `
-      <p>Standing on the Giza plateau, it's easy to feel overwhelmed by the sheer scale of the pyramids. The Great Pyramid of Khufu (Cheops) was the tallest man-made structure on Earth for over 3,800 years! But the question that has fascinated people for centuries is: how did they build them?</p>
+      <p>Have you ever stood before something so huge you had to tilt your head all the way back just to see the top? 🤩 Standing on the Giza plateau, you'd definitely feel tiny next to the pyramids! 😮 The Great Pyramid of Khufu was the tallest thing humans built for over 3,800 years! 🏆 But everyone always wonders: how in the world did they build these massive structures? 🤔</p>
       
-      <p>Historians and archaeologists now believe that the pyramids were built by skilled workers rather than slaves. Evidence suggests these workers were organized into teams who worked in shifts throughout the year, with peak construction occurring during the Nile's annual flood when farmers couldn't work their fields.</p>
+      <p>Guess what? Those pyramids weren't built by slaves like in the movies! 🎬 Archaeologists found evidence that skilled workers constructed them instead. ✅ These dedicated workers organized into teams and worked in shifts throughout the year. 👷‍♂️ They worked extra hard during the Nile's yearly flood when farmers couldn't work in their fields. 💦</p>
       
       <h3>Engineering Marvels</h3>
-      <p>The precision of the Great Pyramid is truly remarkable. Its base is level to within just 2.1 cm, and its sides are oriented to the cardinal directions with an accuracy of up to 0.05 degrees. This was achieved using simple tools like plumb bobs, square levels, and measuring ropes.</p>
+      <p>Can you believe the Great Pyramid's base is level within just 2.1 centimeters? 📏 That's super precise! 🎯 The sides perfectly line up with north, south, east, and west with amazing accuracy. 🧭 They achieved this using simple tools like plumb bobs, square levels, and measuring ropes. 🧵</p>
       
-      <p>The stone blocks were quarried using copper chisels and dolerite balls, then transported via boats when possible and sledges over land. Teams of workers then dragged and lifted the blocks into place using ramps, levers, and other simple machines.</p>
+      <p>Workers cut the stone blocks using copper chisels and hard stone balls. 🪨 They moved the blocks using boats when possible and sledges over land. 🚢 Teams of workers then pulled and lifted the blocks into place using ramps, levers, and other simple machines. 💪</p>
       
       <h3>Cultural Significance</h3>
-      <p>The pyramids were more than just tombs; they were religious monuments that played a vital role in the king's journey to the afterlife. According to ancient Egyptian belief, the pyramid shape represented the primordial mound from which the earth was created and served as a stairway to the heavens.</p>
+      <p>The pyramids weren't just fancy tombs - they were super important religious monuments. ⛪ According to ancient Egyptian beliefs, the pyramid shape represented the first mound of earth that rose from the waters at the beginning of time. 🌊 They also served as a stairway for the pharaoh to climb up to the stars after death. ✨</p>
     `,
     imageUrl: "https://images.unsplash.com/photo-1594741158705-2fb3a4a81f01?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
     imageAlt: "Great Pyramids of Giza",
     imageCredit: "Photo by Ahmed Samir on Unsplash",
     publishDate: "2023-05-15",
     readTime: 8,
-    ageLevel: "Elementary",
+    ageLevel: "Middle School",
     tags: [
       { name: "Ancient History", color: "blue" },
       { name: "Egypt", color: "green" }
     ],
     author: {
-      name: "Dr. Emily Sands",
-      initials: "ES",
-      bio: "Archaeologist specializing in ancient Egyptian architecture and construction techniques."
+      name: "Ciaran York",
+      initials: "CY",
+      bio: "Social studies educator with a passion for making history accessible to young learners."
     },
     didYouKnow: {
-      fact: "The Great Pyramid contains an estimated 2.3 million stone blocks, each weighing an average of 2.5 tons. The largest blocks, used in the King's Chamber, weigh as much as 80 tons!"
+      fact: "The Great Pyramid contains about 2.3 million stone blocks, each weighing around 2.5 tons! 😱 The largest blocks in the King's Chamber weigh as much as 80 tons - that's like 16 elephants stacked together! 🐘"
     },
     discussionQuestions: [
-      "Why do you think the ancient Egyptians invested so many resources in building the pyramids?",
-      "How might the construction of the pyramids have affected Egyptian society and economy?",
-      "What can we learn about ancient Egyptian knowledge of mathematics and engineering from studying the pyramids?"
+      "Why do you think the ancient Egyptians put so much time and effort into building the pyramids? 🤔",
+      "How do you think building the pyramids affected everyday life in ancient Egypt? 👨‍👩‍👧‍👦",
+      "What can we learn about ancient Egyptian knowledge of math and engineering from the pyramids? 🧮"
     ],
     sources: [
       {
@@ -61,7 +61,7 @@ export const articles: Article[] = [
         url: "nationalgeographic.com"
       }
     ],
-    relatedArticles: ["2", "3", "4"],
+    relatedArticles: ["4", "5"],
     worksheets: ["1"]
   },
   {
@@ -70,20 +70,20 @@ export const articles: Article[] = [
     title: "The Roman Republic: Foundation of Modern Democracy",
     description: "Explore how Rome's political system influenced democratic principles we still use today, from checks and balances to representative government.",
     content: `
-      <p>The Roman Republic, established around 509 BCE after the overthrow of the monarchy, created a political system that would influence governments for centuries to come. Its structure included multiple branches with distributed powers—a concept that directly inspired the framers of the American Constitution.</p>
+      <p>Did you know that many of our ideas about government come from people who lived over 2,000 years ago? 🤯 The Roman Republic, which began around 509 BCE after they kicked out their king, created a political system that would change the world forever. 👑 Their government structure with different branches of power even inspired the people who wrote the American Constitution! 📜</p>
       
       <h3>Checks and Balances</h3>
-      <p>Perhaps the most enduring legacy of the Roman Republic was its system of checks and balances. Power was divided among different institutions to prevent any single person or group from gaining too much control.</p>
+      <p>Maybe the coolest thing the Romans figured out was how to stop any one person from getting too powerful. 💪 They split power between different parts of their government so everyone kept an eye on each other. 👀</p>
       
-      <p>The Republic was governed by two consuls who served as chief executives, a Senate composed of patricians (aristocrats) that advised on policy, and various assemblies where citizens could vote. Each institution had specific powers that limited the others.</p>
+      <p>The Republic had two consuls who were like presidents, a Senate filled with wealthy aristocrats who gave advice, and assemblies where regular citizens could vote. 🗳️ Each group had certain powers that limited what the others could do. 🛑</p>
       
       <h3>From Republic to Empire</h3>
-      <p>Despite its innovative political system, the Republic eventually gave way to imperial rule. The transition began with Julius Caesar's rise to power and culminated with his adopted son Octavian (Augustus) becoming the first Roman Emperor in 27 BCE.</p>
+      <p>Even with their clever system, the Republic eventually fell apart. 😢 The trouble started when Julius Caesar gained too much power, and it ended when his adopted son Octavian (Augustus) became the first Roman Emperor in 27 BCE. 👑</p>
       
-      <p>The Republic's fall offers important lessons about maintaining democratic institutions. Economic inequality, military expansion, and political corruption all contributed to the collapse of representative government in Rome.</p>
+      <p>The story of Rome's fall teaches us important lessons about democracy. 📚 Things like economic inequality, military expansion, and corrupt politicians all helped destroy their government system. 💔</p>
       
       <h3>Legacy in Modern Governance</h3>
-      <p>The Roman Republic's influence extends far beyond ancient history. Modern concepts like separation of powers, veto authority, term limits, and representative assemblies all have roots in Roman governance. Even the physical symbols of government—like the eagle and the fasces—were adopted from Rome by many modern nations.</p>
+      <p>Even though the Roman Republic didn't last forever, its ideas are everywhere in modern governments! 🌍 Concepts like separation of powers, the veto, term limits, and elected representatives all have roots in Roman ideas. 🌱 Even government symbols—like the eagle and the fasces—were borrowed from Rome by many modern nations. 🦅</p>
     `,
     imageUrl: "https://images.unsplash.com/photo-1551009175-15bdf9dcb580?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     imageAlt: "Roman Colosseum",
@@ -95,17 +95,17 @@ export const articles: Article[] = [
       { name: "Rome", color: "red" }
     ],
     author: {
-      name: "Prof. Marcus Aurelius",
-      initials: "MA",
-      bio: "Professor of Classical History specializing in Roman political institutions."
+      name: "Ciaran York",
+      initials: "CY",
+      bio: "Social studies educator with a passion for making history accessible to young learners."
     },
     didYouKnow: {
-      fact: "The word 'republic' comes from the Latin 'res publica,' which means 'public affair' or 'public matter,' emphasizing that government should be the concern of all citizens, not just rulers."
+      fact: "The word 'republic' comes from the Latin 'res publica,' which means 'public affair' or 'public matter.' 📖 This emphasized that government should belong to all citizens, not just the rulers! 👨‍👩‍👧‍👦"
     },
     discussionQuestions: [
-      "How do modern democratic systems compare to the Roman Republic?",
-      "What factors do you think make democratic governments vulnerable to collapse?",
-      "Why is the separation of powers important in a government?"
+      "How do our modern governments compare to the Roman Republic? 🤔",
+      "What do you think makes democratic governments vulnerable to collapse? ⚠️",
+      "Why is it important to separate power between different parts of government? 🏛️"
     ],
     sources: [
       {
@@ -125,64 +125,67 @@ export const articles: Article[] = [
   },
   {
     id: "3",
-    slug: "mathematical-brilliance-maya-calendars-astronomy",
-    title: "Mathematical Brilliance of the Maya: Calendars and Astronomy",
-    description: "Understand how the Maya created a calendar more accurate than European systems and made precise astronomical predictions with simple tools.",
+    slug: "california-gold-rush",
+    title: "The California Gold Rush: Striking it Rich in the West",
+    description: "Learn about the historic event that transformed California and brought people from all over the world seeking fortune and a new life.",
     content: `
-      <p>The Maya civilization, which flourished in Mesoamerica from around 2000 BCE to 1600 CE, developed one of the most sophisticated mathematical and astronomical systems of the ancient world. Their achievements in these fields rival those of ancient Babylon, China, and Greece.</p>
+      <p>Imagine finding something shiny in a stream that could make you rich overnight! 🤩 That's exactly what happened to James W. Marshall in January 1848 when he spotted gold flakes while building a sawmill along the American River in California. ✨ This amazing discovery triggered one of the biggest people movements in American history and totally transformed California forever! 🌟</p>
       
-      <h3>Advanced Number System</h3>
-      <p>Central to Maya mathematics was their number system, which included the concept of zero centuries before it appeared in European mathematics. Their vigesimal (base-20) system used only three symbols: a dot representing one, a bar representing five, and a shell-like symbol for zero.</p>
+      <h3>Gold Fever Spreads</h3>
+      <p>Word about the gold discovery traveled pretty slowly at first. 🐌 But by 1849, thousands of hopeful gold-seekers (nicknamed "forty-niners") started pouring in from across America and around the world! 🌎 They came by ship around South America, across Panama, or by wagon train across the continent. 🚂</p>
       
-      <p>This elegant system allowed Maya mathematicians to calculate enormous sums and work with concepts that wouldn't appear in European mathematics until much later.</p>
+      <p>San Francisco exploded from a tiny settlement of about 200 people in 1846 to a booming city of around 36,000 by 1852! 📈 Towns with fun names like Rough and Ready, Hangtown, and Poker Flat popped up overnight throughout the hills. 🏠</p>
       
-      <h3>Precision Calendars</h3>
-      <p>The Maya developed multiple calendars that operated simultaneously. The Tzolkin (260-day sacred calendar) and the Haab (365-day solar calendar) combined to form a Calendar Round that repeated every 52 years.</p>
+      <h3>Life in the Goldfields</h3>
+      <p>Looking for gold was super hard and dangerous work. ⛏️ The first forty-niners used simple techniques like panning, where they swirled river water in a shallow pan to separate gold from sand and gravel. 💦 As the easy-to-find gold disappeared, miners had to develop more complicated methods like sluice boxes, hydraulic mining, and digging deep underground. 🕳️</p>
       
-      <p>For longer time periods, they invented the Long Count, capable of measuring time over millions of years. Their calculation of the solar year as 365.2420 days is remarkably close to the modern value of 365.2422 days—more accurate than the calendar used in Europe until the 16th century.</p>
+      <p>Most miners lived in tents or rough cabins without many comforts. 🏕️ Food, tools, and basic supplies cost a fortune because everything had to be shipped from far away. 💰 Many miners spent every penny they earned just to survive, and most never actually got rich. 😢</p>
       
-      <h3>Astronomical Observations</h3>
-      <p>Maya astronomer-priests tracked the movements of the sun, moon, planets, and stars with extraordinary precision. They could predict eclipses and planetary cycles hundreds of years in advance using observations made with simple instruments rather than telescopes.</p>
+      <h3>A Diverse Population</h3>
+      <p>The Gold Rush brought people from all over the world together! 🌏 Miners came from Mexico, Chile, China, Australia, Europe, and the eastern United States. 🧳 This created one of America's first truly multicultural regions, though sadly there was also a lot of discrimination and conflict. 👥</p>
       
-      <p>The Dresden Codex, one of the few surviving Maya books, contains tables tracking Venus with an error of just two hours per 584-day cycle—an incredible feat of ancient astronomy.</p>
+      <h3>California Transformed</h3>
+      <p>The Gold Rush changed California forever! 🔄 It helped California become a state in 1850 and led to the building of roads, schools, churches, and other important buildings. 🏫 The huge population boom created a need for food, resulting in California's first farms and ranches. 🚜</p>
+      
+      <p>While the Gold Rush eventually ended as gold became harder to find, its effects are still felt in California's diverse population, entrepreneurial spirit, and continuing growth. 🌱</p>
     `,
-    imageUrl: "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    imageAlt: "Mayan ruins",
-    publishDate: "2023-05-03",
-    readTime: 15,
-    ageLevel: "High School",
+    imageUrl: "https://images.unsplash.com/photo-1584992236310-6edddc08acff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Gold mining equipment and river",
+    publishDate: "2023-07-04",
+    readTime: 10,
+    ageLevel: "Elementary",
     tags: [
-      { name: "Mesoamerican History", color: "blue" },
-      { name: "Maya", color: "yellow" }
+      { name: "American History", color: "blue" },
+      { name: "Westward Expansion", color: "orange" }
     ],
     author: {
-      name: "Dr. Sofia Rodriguez",
-      initials: "SR",
-      bio: "Anthropologist specializing in pre-Columbian mathematics and astronomy."
+      name: "Ciaran York",
+      initials: "CY",
+      bio: "Social studies educator with a passion for making history accessible to young learners."
     },
     didYouKnow: {
-      fact: "The Maya calendar's precision allowed them to calculate that 405 lunar months equal 11,960 days, which is accurate to within just two hours over this entire period."
+      fact: "The total amount of gold found during the California Gold Rush weighs about 750,000 pounds! 😲 That would be worth about $2 billion today - enough money to buy 20 million video game consoles! 🎮"
     },
     discussionQuestions: [
-      "How did the Maya achieve such mathematical and astronomical precision without modern tools?",
-      "Why do you think accurate calendars were so important to ancient civilizations?",
-      "How did misconceptions about the Maya calendar lead to doomsday fears in 2012?"
+      "Why do you think people were willing to risk so much to search for gold in California? 💭",
+      "How did the Gold Rush change California's environment and landscape? 🏞️",
+      "What other 'gold rushes' or resource booms have happened in history? How were they similar or different? 🔍"
     ],
     sources: [
       {
-        title: "Maya Civilization: A Captivating Guide to Maya History and Maya Mythology",
-        author: "McKay, C.",
-        publisher: "Captivating History",
-        year: 2018
+        title: "The California Gold Rush: A History Just for Kids",
+        author: "KidCaps",
+        publisher: "CreateSpace",
+        year: 2013
       },
       {
-        title: "The Ancient Maya",
-        author: "Sharer, R.J. & Traxler, L.P.",
-        publisher: "Stanford University Press",
-        year: 2006
+        title: "Days of Gold: The California Gold Rush and the American Nation",
+        author: "Johnson, S.L.",
+        publisher: "University of California Press",
+        year: 2018
       }
     ],
-    relatedArticles: ["1", "4"]
+    relatedArticles: ["5", "6"]
   },
   {
     id: "4",
@@ -190,41 +193,41 @@ export const articles: Article[] = [
     title: "Mysterious Riddles of the Sphinx",
     description: "The Great Sphinx of Giza has guarded the pyramids for thousands of years. Learn about its origins and the mysteries that still surround it.",
     content: `
-      <p>Standing sentinel on the Giza plateau, the Great Sphinx is one of the most recognizable monuments of ancient Egypt. With the body of a lion and the head of a human (believed to represent Pharaoh Khafre), this colossal statue has captured human imagination for millennia.</p>
+      <p>Have you ever seen a creature that's part human, part lion? 🦁 The Great Sphinx of Giza is exactly that – a huge statue with a human head and a lion's body! 🤩 This massive guardian has been watching over the pyramids for thousands of years and still holds many secrets. 🔍</p>
       
       <h3>An Ancient Marvel</h3>
-      <p>At 241 feet long and 66 feet high, the Sphinx is the largest monolithic statue in the world. Carved from a single ridge of limestone, it faces directly from west to east, aligning perfectly with the rising sun on certain days.</p>
+      <p>The Sphinx is ENORMOUS! 😮 At 241 feet long and 66 feet high, it's the largest statue carved from a single piece of stone in the whole world! 🌍 It faces directly from west to east, perfectly lining up with the sunrise on certain special days. 🌅</p>
       
-      <p>While most Egyptologists date the Sphinx to around 2500 BCE during the reign of Pharaoh Khafre, some researchers have proposed alternative theories suggesting it could be much older, pointing to evidence of water erosion patterns that might indicate construction during a wetter period thousands of years earlier.</p>
+      <p>Most experts think the Sphinx was built around 2500 BCE during the reign of Pharaoh Khafre (that's probably his face on it!). 👑 But some researchers have different ideas! 🤔 They point to interesting water erosion patterns that might suggest it was built during a much wetter time, thousands of years earlier than we thought! 💧</p>
       
       <h3>Lost Nose and Missing Beard</h3>
-      <p>Contrary to popular belief, Napoleon's troops did not shoot off the Sphinx's nose. Archaeological evidence suggests it was deliberately damaged in the 14th century by a Muslim religious figure who considered the monument idolatrous. The Sphinx also once had a royal beard, fragments of which are now in the British Museum and Cairo Museum.</p>
+      <p>Did you know the Sphinx wasn't always missing its nose? 👃 Despite what movies might show, Napoleon's soldiers didn't shoot it off. ❌ Archaeological evidence suggests it was actually damaged in the 14th century by someone who thought the monument was idolatrous. 📜 The Sphinx also once had a magnificent royal beard - pieces of it are now sitting in museums in London and Cairo! 🧔</p>
       
       <h3>Hidden Chambers?</h3>
-      <p>Modern archaeological techniques have detected mysterious cavities beneath the Sphinx, fueling speculation about hidden chambers. While some of these are likely natural limestone features, archaeological investigations continue to explore potential human-made structures that might contain undiscovered treasures or historical records.</p>
+      <p>Here's where it gets super exciting! 🤫 Modern technology has detected mysterious empty spaces underneath the Sphinx! 📡 While some of these are probably just natural holes in the limestone, archaeologists are still investigating whether some might be human-made chambers. 👷‍♀️ Could there be undiscovered treasures or historical records hidden beneath this ancient guardian? 💎</p>
       
-      <p>The Dream Stela, placed between the paws of the Sphinx by Pharaoh Thutmose IV, tells the story of how the Sphinx appeared to him in a dream, promising him the throne if he would clear away the sand that had buried much of the monument—but does this stela hold clues to more secrets?</p>
+      <p>Between the Sphinx's giant paws stands a stone tablet called the Dream Stela. 💭 It tells the story of how the Sphinx appeared to Pharaoh Thutmose IV in a dream, promising him the throne if he would dig the monument out from the sand that had buried much of it. 👑 Some wonder if this ancient tablet might contain clues to even more Sphinx secrets! 🗝️</p>
     `,
     imageUrl: "https://images.unsplash.com/photo-1564979045531-fa386a275b27?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     imageAlt: "Sphinx at Giza",
     publishDate: "2023-06-01",
     readTime: 10,
-    ageLevel: "Elementary",
+    ageLevel: "Middle School",
     tags: [
       { name: "Ancient Egypt", color: "blue" }
     ],
     author: {
-      name: "Dr. Emily Sands",
-      initials: "ES",
-      bio: "Archaeologist specializing in ancient Egyptian architecture and construction techniques."
+      name: "Ciaran York",
+      initials: "CY",
+      bio: "Social studies educator with a passion for making history accessible to young learners."
     },
     didYouKnow: {
-      fact: "The Arabic name for the Sphinx is Abu al-Hol, which means 'Father of Terror,' reflecting the awe and fear this massive monument inspired in ancient times."
+      fact: "The Arabic name for the Sphinx is Abu al-Hol, which means 'Father of Terror'! 😱 This reflects the awe and fear this massive monument inspired in ancient times! 🙌"
     },
     discussionQuestions: [
-      "Why do you think the ancient Egyptians created a monument combining human and animal features?",
-      "What might explain the different theories about the Sphinx's age?",
-      "How have modern technologies changed our understanding of ancient monuments?"
+      "Why do you think the ancient Egyptians created a monument combining human and animal features? 🧠",
+      "What might explain the different theories about the Sphinx's age? 📆",
+      "How have modern technologies changed our understanding of ancient monuments? 🛰️"
     ],
     relatedArticles: ["1", "5"]
   },
@@ -234,97 +237,128 @@ export const articles: Article[] = [
     title: "Mesopotamia: Cradle of Civilization",
     description: "Between the Tigris and Euphrates rivers, humanity's first cities emerged with remarkable innovations in writing, law, and architecture.",
     content: `
-      <p>Mesopotamia, Greek for "between rivers," was home to the world's first urban civilizations. In the fertile valley between the Tigris and Euphrates rivers (modern-day Iraq), humans first transitioned from nomadic hunter-gatherers to settled agricultural societies around 10,000 BCE.</p>
+      <p>Have you ever wondered where things like writing, cities, and organized government first began? 🤔 Look no further than Mesopotamia - a name that means "between rivers" in Greek! 🌊 In the fertile valley between the Tigris and Euphrates rivers (in modern-day Iraq), humans first changed from wandering hunter-gatherers to settled farmers around 10,000 BCE. 🌱</p>
       
       <h3>The Birth of Writing</h3>
-      <p>Perhaps Mesopotamia's most significant contribution was the invention of writing. Around 3400 BCE, the Sumerians developed cuneiform script—first as pictographs for accounting purposes, then evolving into a complex writing system capable of expressing abstract ideas and recording literature.</p>
+      <p>One of Mesopotamia's most amazing gifts to humanity was the invention of writing! ✍️ Around 3400 BCE, the Sumerians developed cuneiform script—starting with simple picture symbols for counting things, then evolving into a complex system that could express abstract ideas and record stories. 📝</p>
       
-      <p>The Epic of Gilgamesh, one of humanity's oldest written stories, originates from this region and includes a flood narrative that predates the biblical account of Noah by over a thousand years.</p>
+      <p>The Epic of Gilgamesh, one of the oldest written stories ever found, comes from this region! 📚 It even includes a great flood story that's actually older than the biblical story of Noah by more than a thousand years! 🌧️</p>
       
       <h3>Laws and Governance</h3>
-      <p>The Code of Hammurabi, created around 1754 BCE, represents one of the earliest and most complete legal codes. Its 282 laws cover everything from family and property rights to professional standards and punishments for crimes.</p>
+      <p>Have you heard of the Code of Hammurabi? 📜 Created around 1754 BCE, it's one of the earliest and most complete sets of laws we've ever found! 👨‍⚖️ Its 282 laws covered everything from family rights to professional standards and punishments for crimes. 🏛️</p>
       
-      <p>The famous principle "an eye for an eye" originates in this code, which sought to create proportional consequences rather than allowing unlimited blood feuds.</p>
+      <p>The famous saying "an eye for an eye" actually comes from this ancient code! 👁️ It was meant to create fair punishments rather than allowing endless revenge between families. ⚖️</p>
       
       <h3>Technological Innovations</h3>
-      <p>Mesopotamian engineers developed sophisticated irrigation systems that transformed arid land into productive farmland. They invented the wheel around 3500 BCE, revolutionizing transportation and pottery production.</p>
+      <p>Mesopotamian engineers were super creative problem-solvers! 🔧 They developed amazing irrigation systems that turned dry land into productive farmland where crops could grow. 🌾 They invented the wheel around 3500 BCE, completely changing transportation and pottery-making forever! 🛞</p>
       
-      <p>Their architectural achievements included ziggurats (terraced temple structures) and elaborate city walls and gates. The Hanging Gardens of Babylon, if they existed as described, would have been an engineering marvel with complex hydraulic systems bringing water to elevated gardens.</p>
-      
-      <h3>Legacy</h3>
-      <p>Many aspects of modern life trace their origins to Mesopotamian innovations: the 60-minute hour and 360-degree circle (from their base-60 number system), the chariot, the sailboat, maps, and mathematical concepts like geometry and algebra all developed in this remarkable region.</p>
+      <p>Have you seen pictures of ziggurats? 🏙️ These massive stepped temples were architectural wonders that influenced sacred buildings around the world for thousands of years! 🕌</p>
     `,
-    imageUrl: "https://images.unsplash.com/photo-1564499504739-bc5d9272ed9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    imageAlt: "Mesopotamian artifact",
+    imageUrl: "https://images.unsplash.com/photo-1570870802499-f12b24252110?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Ancient Mesopotamian ruins and artifacts",
     publishDate: "2023-04-20",
-    readTime: 14,
+    readTime: 9,
     ageLevel: "Middle School",
     tags: [
+      { name: "Ancient History", color: "blue" },
       { name: "Mesopotamia", color: "purple" }
     ],
     author: {
-      name: "Prof. Akbar Hussein",
-      initials: "AH",
-      bio: "Professor of Ancient Near Eastern History specializing in early urban societies."
+      name: "Ciaran York",
+      initials: "CY",
+      bio: "Social studies educator with a passion for making history accessible to young learners."
     },
     didYouKnow: {
-      fact: "Mesopotamians invented the concept of time as we know it today, dividing the day into 24 hours, hours into 60 minutes, and minutes into 60 seconds."
+      fact: "The world's oldest known written recipe is from Mesopotamia—a recipe for beer written on a clay tablet around 3900 BCE! 🍺 Beer was considered a gift from the gods and was often used in religious ceremonies! 🙏"
     },
     discussionQuestions: [
-      "How did the geography of Mesopotamia influence the development of civilization there?",
-      "In what ways do we still use Mesopotamian innovations in our daily lives?",
-      "Why is writing considered such a revolutionary invention in human history?"
+      "How did the geography between the two rivers influence the development of Mesopotamian civilization? 🗺️",
+      "Why is writing considered one of humanity's most important inventions? 📖",
+      "How do the achievements of Mesopotamia continue to influence our world today? 🌐"
+    ],
+    sources: [
+      {
+        title: "Mesopotamia: The Invention of the City",
+        author: "Leick, G.",
+        publisher: "Penguin Books",
+        year: 2002
+      },
+      {
+        title: "Ancient Mesopotamia: Portrait of a Dead Civilization",
+        author: "Oppenheim, A.L.",
+        publisher: "University of Chicago Press",
+        year: 1977
+      }
     ],
     relatedArticles: ["1", "2"]
   },
   {
     id: "6",
-    slug: "parthenon-symbol-democracys-birth",
-    title: "The Parthenon: Symbol of Democracy's Birth",
-    description: "Explore how this iconic temple represents ancient Greek achievements in art, architecture, and democratic ideals that still influence us today.",
+    slug: "us-states-geography-regions",
+    title: "The United States: Exploring America's Diverse Regions",
+    description: "Take a journey through the different regions of the United States and discover what makes each area special and unique.",
     content: `
-      <p>Perched atop the Acropolis, overlooking the city of Athens, the Parthenon stands as the most iconic symbol of ancient Greek civilization. Built between 447-432 BCE during the height of Athenian power, this temple dedicated to the goddess Athena represented not just religious devotion but the triumph of democracy, reason, and artistic excellence.</p>
+      <p>Did you know the United States is like a giant puzzle made up of 50 unique pieces? 🧩 From snowy mountains to sunny beaches, America has an amazing variety of landscapes, cultures, and histories! 🏔️ Let's take a fun trip across the country to discover what makes each region special! 🚐</p>
       
-      <h3>Architectural Perfection</h3>
-      <p>The Parthenon appears perfectly straight and symmetrical to the human eye, but in reality, it incorporates subtle curves and adjustments—a technique called entasis. Columns bulge slightly in the middle and lean inward, while the platform curves upward in the center. These optical refinements create the impression of perfect harmony and counteract the visual distortions that would make truly straight lines appear bent.</p>
+      <h3>The Northeast</h3>
+      <p>The Northeast includes states like Massachusetts, New York, and Pennsylvania. 🗽 This is where the American Revolution began, so you'll find tons of cool historical sites here! 🇺🇸 The Northeast has gorgeous fall leaves that turn bright red and orange, busy cities like New York and Boston, and important industries like finance and education. 🍁</p>
       
-      <p>Its proportions follow the Golden Ratio, a mathematical relationship found throughout nature that's considered especially pleasing to the eye. The attention to mathematical precision reflects Greek values of reason and order.</p>
+      <p>In New England (Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, and Connecticut), you'll discover charming coastal towns, yummy maple syrup farms, and some of America's oldest schools and colleges. 🏫</p>
       
-      <h3>Symbol of Democracy</h3>
-      <p>The Parthenon was built during the leadership of Pericles, a champion of Athenian democracy. Construction of this magnificent temple was approved by the democratic assembly and funded by the treasury of the Delian League, a coalition of Greek city-states originally formed for defense against the Persian Empire.</p>
+      <h3>The South</h3>
+      <p>The Southern states include Virginia, North Carolina, South Carolina, Georgia, Florida, Alabama, Mississippi, Louisiana, and others. 🌴 The South is famous for its friendly "y'all come back now" hospitality, mouth-watering food like barbecue and fried chicken, and important civil rights history. 🍗</p>
       
-      <p>This connection between artistic achievement and democratic governance made the Parthenon a powerful symbol. It represented the idea that free citizens governing themselves could reach heights of cultural and intellectual excellence impossible under tyrannical rule.</p>
+      <p>Florida's Everglades, Louisiana's swampy bayous, and the misty Great Smoky Mountains are some of the South's natural wonders. 🐊 The region has an incredible musical heritage too, with blues, jazz, country, and rock 'n' roll all starting here! 🎸</p>
       
-      <h3>Artistic Innovation</h3>
-      <p>The sculpted friezes and metopes that decorated the Parthenon told stories of mythical battles and Athenian religious ceremonies. The massive statue of Athena Parthenos (the Virgin) inside the temple stood nearly 40 feet tall, made of gold and ivory over a wooden frame.</p>
+      <h3>The Midwest</h3>
+      <p>Often called America's Heartland, the Midwest includes states like Ohio, Michigan, Illinois, Wisconsin, Minnesota, Iowa, and others. ❤️ This region is known for its super friendly people, farming, and the Great Lakes, which contain 20% of the world's freshwater! 💧</p>
       
-      <p>These sculptures represented the height of Greek artistic achievement, with natural, idealized human forms that would influence Western art for millennia to come.</p>
+      <p>Chicago, one of America's biggest cities, is located in the Midwest, along with important car-making centers in Michigan. 🚗 The Midwest grows much of the nation's corn, wheat, and soybeans in its fertile farmlands - that's why it's sometimes called America's breadbasket! 🌽</p>
       
-      <h3>Legacy Through Time</h3>
-      <p>Though damaged by explosion in 1687 when used as a gunpowder magazine during Ottoman rule, and further diminished by the removal of many sculptures (the controversial "Elgin Marbles" now in the British Museum), the Parthenon continues to inspire. Its architectural elements appear in government buildings, museums, and banks worldwide as symbols of democracy, reason, and cultural achievement.</p>
+      <h3>The West</h3>
+      <p>The Western states include California, Oregon, Washington, Colorado, Nevada, Utah, and others. 🏄‍♀️ This region has mind-blowing geographic diversity, from the Pacific coastline to the Rocky Mountains, and from hot deserts to giant redwood forests! 🌲</p>
+      
+      <p>The West is home to many famous national parks like Yellowstone, Yosemite, and the Grand Canyon. 🏞️ California, the state with the most people, has such a huge economy that if it were its own country, it would be one of the richest in the world! 💰</p>
+      
+      <h3>Alaska and Hawaii</h3>
+      <p>These non-contiguous states (meaning they don't touch the other 48) add even more variety to America! 🗺️ Alaska, the biggest state by area, has magnificent wilderness, wildlife, and mountains, including Denali, North America's highest peak. 🐻 Hawaii, a volcanic island chain in the Pacific, has a tropical climate and a unique cultural heritage blending native Hawaiian, Asian, and Western influences. 🌺</p>
     `,
-    imageUrl: "https://images.unsplash.com/photo-1543922596-b3bbaba80649?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    imageAlt: "Ancient Greek temple",
-    publishDate: "2023-03-15",
-    readTime: 12,
-    ageLevel: "High School",
+    imageUrl: "https://images.unsplash.com/photo-1551272744-5df0498cecc4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Map of the United States showing different regions",
+    publishDate: "2023-08-15",
+    readTime: 11,
+    ageLevel: "Elementary",
     tags: [
-      { name: "Ancient Greece", color: "green" }
+      { name: "Geography", color: "green" },
+      { name: "United States", color: "blue" }
     ],
     author: {
-      name: "Dr. Helena Papadopoulos",
-      initials: "HP",
-      bio: "Architectural historian specializing in ancient Greek temples and their cultural significance."
+      name: "Ciaran York",
+      initials: "CY",
+      bio: "Social studies educator with a passion for making history accessible to young learners."
     },
     didYouKnow: {
-      fact: "The Parthenon contains no straight lines or right angles. Every element features subtle curves designed to create the optical illusion of perfect harmony when viewed by the human eye."
+      fact: "The United States has 63 national parks covering over 52 million acres! 🏞️ The first national park, Yellowstone, was established in 1872, becoming the first national park in the world! 🌋"
     },
     discussionQuestions: [
-      "How does architecture reflect the values of a society?",
-      "Why do you think so many government buildings around the world are inspired by Greek architectural styles?",
-      "What are the ethical considerations surrounding the Elgin Marbles and other artifacts removed from their original locations?"
+      "Which region of the United States would you most like to visit and why? 🧳",
+      "How does the geography of a region affect the way people live there? 🏠",
+      "What are some special features of the region where you live? 📍"
     ],
-    relatedArticles: ["2", "3"]
+    sources: [
+      {
+        title: "The Regions of the United States",
+        author: "Blumenthal, K.",
+        publisher: "Children's Press",
+        year: 2018
+      },
+      {
+        title: "National Geographic Kids United States Atlas",
+        publisher: "National Geographic Kids",
+        year: 2020
+      }
+    ],
+    relatedArticles: ["3", "5"]
   }
 ];
 
@@ -340,22 +374,26 @@ export const getRelatedArticles = (articleId: string): Article[] => {
   const article = getArticleById(articleId);
   if (!article || !article.relatedArticles) return [];
   
-  return articles.filter(a => article.relatedArticles?.includes(a.id));
+  return article.relatedArticles
+    .map(id => getArticleById(id))
+    .filter((article): article is Article => article !== undefined);
 };
 
-export const searchArticles = (query: string, ageLevel: string = 'All'): Article[] => {
-  const lowercaseQuery = query.toLowerCase();
+export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'): Article[] => {
+  query = query.toLowerCase();
   
   return articles.filter(article => {
-    const matchesQuery = (
-      article.title.toLowerCase().includes(lowercaseQuery) ||
-      article.description.toLowerCase().includes(lowercaseQuery) ||
-      article.content.toLowerCase().includes(lowercaseQuery) ||
-      article.tags.some(tag => tag.name.toLowerCase().includes(lowercaseQuery))
+    // Filter by age level if specified
+    if (ageLevel !== 'All' && article.ageLevel !== ageLevel) {
+      return false;
+    }
+    
+    // Search in title, description, and content
+    return (
+      article.title.toLowerCase().includes(query) ||
+      article.description.toLowerCase().includes(query) ||
+      article.content.toLowerCase().includes(query) ||
+      article.tags.some(tag => tag.name.toLowerCase().includes(query))
     );
-    
-    const matchesAgeLevel = ageLevel === 'All' || article.ageLevel === ageLevel;
-    
-    return matchesQuery && matchesAgeLevel;
   });
 };

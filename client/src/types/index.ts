@@ -1,4 +1,5 @@
-export type AgeLevel = "Elementary" | "Middle School" | "High School";
+export type AgeLevel = "Elementary" | "Middle School";
+export type AgeLevelFilter = AgeLevel | "All";
 
 export type Tag = {
   name: string;
@@ -52,5 +53,5 @@ export type Resource = {
 
 export type SearchFilters = {
   query: string;
-  ageLevel: AgeLevel | "All";
+  ageLevel: AgeLevelFilter;
 };
