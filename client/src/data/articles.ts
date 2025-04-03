@@ -66,33 +66,33 @@ export const articles: Article[] = [
   },
   {
     id: "2",
-    slug: "roman-republic-foundation-modern-democracy",
-    title: "The Roman Republic: Foundation of Modern Democracy",
-    description: "Explore how Rome's political system influenced democratic principles we still use today, from checks and balances to representative government.",
+    slug: "ancient-greece-foundation-modern-democracy",
+    title: "Ancient Greece: Foundation of Modern Democracy",
+    description: "Explore how Ancient Greece's political system established democratic principles we still use today, from direct citizen participation to representative government.",
     content: `
-      <p>Did you know that many of our ideas about government come from people who lived over 2,000 years ago? 🤯 The Roman Republic, which began around 509 BCE after they kicked out their king, created a political system that would change the world forever. 👑 Their government structure with different branches of power even inspired the people who wrote the American Constitution! 📜</p>
+      <p>Did you know that many of our ideas about government come from people who lived over 2,500 years ago? 🤯 Ancient Athens, which developed democracy around 508 BCE under Cleisthenes, created a political system that would change the world forever. 👑 Their government structure with citizen participation and equal rights even inspired the people who wrote the American Constitution! 📜</p>
       
-      <h3>Checks and Balances</h3>
-      <p>Maybe the coolest thing the Romans figured out was how to stop any one person from getting too powerful. 💪 They split power between different parts of their government so everyone kept an eye on each other. 👀</p>
+      <h3>Birth of Democracy</h3>
+      <p>Maybe the coolest thing the Greeks figured out was how to give power directly to the citizens. 💪 The word "democracy" itself comes from Greek words "demos" (people) and "kratos" (power) - literally meaning "people power"! 👀</p>
       
-      <p>The Republic had two consuls who were like presidents, a Senate filled with wealthy aristocrats who gave advice, and assemblies where regular citizens could vote. 🗳️ Each group had certain powers that limited what the others could do. 🛑</p>
+      <p>Athens had an assembly called the Ekklesia where all male citizens could participate, vote on laws, and make decisions for the city-state. 🗳️ They also had a Council of 500 citizens chosen by lot and courts where large juries of citizens would decide cases. 🛑</p>
       
-      <h3>From Republic to Empire</h3>
-      <p>Even with their clever system, the Republic eventually fell apart. 😢 The trouble started when Julius Caesar gained too much power, and it ended when his adopted son Octavian (Augustus) became the first Roman Emperor in 27 BCE. 👑</p>
+      <h3>Limitations of Ancient Democracy</h3>
+      <p>Even with their groundbreaking system, Greek democracy had some major problems. 😢 Only free adult men who were citizens could participate - which excluded women, slaves, and foreign residents. This meant only about 10-20% of the population actually had political rights. 👑</p>
       
-      <p>The story of Rome's fall teaches us important lessons about democracy. 📚 Things like economic inequality, military expansion, and corrupt politicians all helped destroy their government system. 💔</p>
+      <p>The story of Athens teaches us important lessons about democracy. 📚 Things like citizen education, participation, and protection against tyranny were all important foundations that still matter today. 💔</p>
       
       <h3>Legacy in Modern Governance</h3>
-      <p>Even though the Roman Republic didn't last forever, its ideas are everywhere in modern governments! 🌍 Concepts like separation of powers, the veto, term limits, and elected representatives all have roots in Roman ideas. 🌱 Even government symbols—like the eagle and the fasces—were borrowed from Rome by many modern nations. 🦅</p>
+      <p>Greek democratic ideas are everywhere in modern governments! 🌍 Concepts like citizen equality under law, the importance of debate and deliberation, and the right of citizens to determine their own laws all have roots in Greek ideas. 🌱 Even government symbols and architecture—like columns and domes—were borrowed from Greece by many modern nations. 🏛️</p>
     `,
-    imageUrl: "https://images.unsplash.com/photo-1551009175-15bdf9dcb580?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    imageAlt: "Roman Colosseum",
+    imageUrl: "https://images.unsplash.com/photo-1565619624098-cf4168a7cd9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Ancient Greek Parthenon",
     publishDate: "2023-05-10",
     readTime: 12,
     ageLevel: "Middle School",
     tags: [
       { name: "Classical History", color: "blue" },
-      { name: "Rome", color: "red" }
+      { name: "Greece", color: "teal" }
     ],
     author: {
       name: "Ciaran York",
@@ -100,25 +100,25 @@ export const articles: Article[] = [
       bio: "Social studies educator with a passion for making history accessible to young learners."
     },
     didYouKnow: {
-      fact: "The word 'republic' comes from the Latin 'res publica,' which means 'public affair' or 'public matter.' 📖 This emphasized that government should belong to all citizens, not just the rulers! 👨‍👩‍👧‍👦"
+      fact: "In ancient Athens, they used a device called a kleroterion (a sort of lottery machine) to randomly select citizens for public duties! 📖 This random selection was considered more democratic than elections, which might favor the wealthy or famous! 👨‍👩‍👧‍👦"
     },
     discussionQuestions: [
-      "How do our modern governments compare to the Roman Republic? 🤔",
+      "How do our modern governments compare to Ancient Athenian democracy? 🤔",
       "What do you think makes democratic governments vulnerable to collapse? ⚠️",
-      "Why is it important to separate power between different parts of government? 🏛️"
+      "Why is citizen participation so important in a democracy? 🏛️"
     ],
     sources: [
       {
-        title: "SPQR: A History of Ancient Rome",
-        author: "Beard, M.",
-        publisher: "Liveright",
-        year: 2015
+        title: "Democracy: A Life",
+        author: "Cartledge, P.",
+        publisher: "Oxford University Press",
+        year: 2018
       },
       {
-        title: "The Roman Republic: A Very Short Introduction",
-        author: "Gwynn, D.M.",
-        publisher: "Oxford University Press",
-        year: 2012
+        title: "The Rise and Fall of Classical Greece",
+        author: "Ober, J.",
+        publisher: "Princeton University Press",
+        year: 2015
       }
     ],
     relatedArticles: ["1", "5"]
