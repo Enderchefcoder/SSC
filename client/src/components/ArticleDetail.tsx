@@ -6,6 +6,7 @@ import { Article } from "@/types";
 import DidYouKnow from "./DidYouKnow";
 import QuizSection from "./QuizSection";
 import Sources from "./Sources";
+import ArticleAIControls from "./ArticleAIControls";
 import { useToast } from "@/hooks/use-toast";
 
 interface ArticleDetailProps {
