@@ -22,7 +22,7 @@ export const articles: Article[] = [
     imageUrl: "https://images.unsplash.com/photo-1605981973512-fb18430a4fb3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
     imageAlt: "Great Pyramids of Giza at sunset",
     imageCredit: "Photo by Spencer Davis on Unsplash",
-    publishDate: "2023-05-15",
+    publishDate: "2025-04-03",
     readTime: 8,
     ageLevel: "Middle School",
     tags: [
@@ -118,7 +118,7 @@ export const articles: Article[] = [
     imageUrl: "https://images.unsplash.com/photo-1603779702200-ea19a28070e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     imageAlt: "The Parthenon on the Acropolis of Athens",
     imageCredit: "Photo by Spencer Davis on Unsplash",
-    publishDate: "2023-05-10",
+    publishDate: "2025-04-03",
     readTime: 12,
     ageLevel: "Middle School",
     tags: [
@@ -213,7 +213,7 @@ export const articles: Article[] = [
     imageUrl: "https://images.unsplash.com/photo-1571407509209-73d3e4a45892?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     imageAlt: "Gold mining pan with gold nuggets",
     imageCredit: "Photo by James Lee on Unsplash",
-    publishDate: "2023-07-04",
+    publishDate: "2025-04-03",
     readTime: 10,
     ageLevel: "Elementary",
     tags: [
@@ -303,7 +303,7 @@ export const articles: Article[] = [
     imageUrl: "https://images.unsplash.com/photo-1590102389740-b48e86dbd761?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     imageAlt: "Close up of the Great Sphinx of Giza",
     imageCredit: "Photo by Mostafa Dokmak on Unsplash",
-    publishDate: "2023-06-01",
+    publishDate: "2025-04-03",
     readTime: 10,
     ageLevel: "Middle School",
     tags: [
@@ -379,7 +379,7 @@ export const articles: Article[] = [
     `,
     imageUrl: "https://images.unsplash.com/photo-1570870802499-f12b24252110?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     imageAlt: "Ancient Mesopotamian ruins and artifacts",
-    publishDate: "2023-04-20",
+    publishDate: "2025-04-03",
     readTime: 9,
     ageLevel: "Middle School",
     tags: [
@@ -478,7 +478,7 @@ export const articles: Article[] = [
     `,
     imageUrl: "https://images.unsplash.com/photo-1551272744-5df0498cecc4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     imageAlt: "Map of the United States showing different regions",
-    publishDate: "2023-08-15",
+    publishDate: "2025-04-03",
     readTime: 11,
     ageLevel: "Elementary",
     tags: [
