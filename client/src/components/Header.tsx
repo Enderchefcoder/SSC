@@ -33,7 +33,7 @@ const Header = () => {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <svg
-                className={`h-8 w-auto text-${theme === 'light' ? 'primary-600' : 'white'}`}  {/*Apply theme to SVG color*/}
+                className={`h-8 w-auto text-${theme === 'light' ? 'primary-600' : 'white'}`} /* Apply theme to SVG color */
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
