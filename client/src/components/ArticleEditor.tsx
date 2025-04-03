@@ -28,14 +28,16 @@ import {
 } from '@/utils/articleUtils';
 import { Trash2, Download, Plus, X, Check } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Switch } from '@/components/ui/switch';
 import { useToast } from '@/hooks/use-toast';
 
 interface ArticleEditorProps {
   article?: Article;
   isNew?: boolean;
+  onSwitchToCodeEditor?: () => void;
 }
 
-const ArticleEditor = ({ article, isNew = false }: ArticleEditorProps) => {
+const ArticleEditor = ({ article, isNew = false, onSwitchToCodeEditor }: ArticleEditorProps) => {
   const [, setLocation] = useLocation();
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
@@ -193,10 +195,24 @@ const ArticleEditor = ({ article, isNew = false }: ArticleEditorProps) => {
     <div className="container mx-auto py-8">
       <Card className="w-full max-w-4xl mx-auto">
         <CardHeader>
-          <CardTitle>{isNew ? 'Create New Article' : 'Edit Article'}</CardTitle>
-          <CardDescription>
-            Fill in the form below to {isNew ? 'create a new' : 'edit the'} article.
-          </CardDescription>
+          <div className="flex justify-between items-center">
+            <div>
+              <CardTitle>{isNew ? 'Create New Article' : 'Edit Article'}</CardTitle>
+              <CardDescription>
+                Fill in the form below to {isNew ? 'create a new' : 'edit the'} article.
+              </CardDescription>
+            </div>
+            {!isNew && onSwitchToCodeEditor && (
+              <div className="flex items-center space-x-2">
+                <Label htmlFor="code-mode" className="cursor-pointer">Code Mode</Label>
+                <Switch 
+                  id="code-mode" 
+                  checked={false}
+                  onCheckedChange={onSwitchToCodeEditor}
+                />
+              </div>
+            )}
+          </div>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
