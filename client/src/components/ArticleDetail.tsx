@@ -62,6 +62,7 @@ const ArticleDetail = ({ article, isPrintMode = false }: ArticleDetailProps) => 
             content={articleContent} 
             onContentChange={setArticleContent} 
           />
+          <ArticleSummary content={articleContent} />
         </div>
       )}
       <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
