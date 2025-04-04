@@ -409,7 +409,7 @@ export const articles: Article[] = [
     ],
     relatedArticles: ["4", "5"],
     worksheets: ["1"],
-    featured: "Great Pyramids";
+    featured: "Great Pyramids",
   },
   {
     id: "2",
