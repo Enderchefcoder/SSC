@@ -8,7 +8,9 @@ import QuizSection from "./QuizSection";
 import Sources from "./Sources";
 import ArticleAIControls from "./ArticleAIControls";
 import ArticleSummary from "./ArticleSummary";
+import ArticleGenerator from "./ArticleGenerator";
 import { useToast } from "@/hooks/use-toast";
+import { saveArticleToLocalStorage } from "@/utils/articleUtils";
 
 interface ArticleDetailProps {
   article: Article;
@@ -65,6 +67,16 @@ const ArticleDetail = ({ article, isPrintMode = false }: ArticleDetailProps) => 
             onContentChange={setArticleContent} 
           />
           <ArticleSummary content={articleContent} />
+          <ArticleGenerator 
+            baseArticleSlug={article.slug}
+            onGenerated={(articles) => {
+              articles.forEach(newArticle => saveArticleToLocalStorage(newArticle));
+              toast({
+                title: "Articles Generated",
+                description: `${articles.length} new articles have been created and saved to your local collection.`,
+              });
+            }}
+          />
         </div>
       )}
       <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
