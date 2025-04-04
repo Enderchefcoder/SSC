@@ -580,3 +580,401 @@ export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'):
     );
   });
 };
+
+  {
+    id: "7",
+    slug: "human-migration-patterns",
+    title: "Human Migration Patterns: The Movement that Shaped Our World",
+    description: "Explore how human migration throughout history has influenced culture, language, and genetic diversity across continents.",
+    content: `
+      <p>Did you know that humans have been on the move for more than 100,000 years? 🌍 People have always traveled across lands and seas looking for better places to live, escaping dangers, or chasing new opportunities. 🏃‍♀️ These ancient journeys shaped who we are today and continue to influence our modern world! 🧭</p>
+
+      <h3>Out of Africa</h3>
+      <p>The first major human migration happened around 60,000-70,000 years ago when early Homo sapiens left Africa to explore new territories. 🌱 Scientists can trace this journey through DNA and archaeological findings! 🧬 These brave explorers slowly spread across Asia, Australia, Europe, and eventually the Americas. 🚶‍♂️</p>
+
+      <p>As they encountered different environments, people adapted in amazing ways! 🌞 In sunny areas near the equator, darker skin protected against intense UV radiation. 🌧️ In cloudy northern regions, lighter skin helped bodies produce vitamin D with less sunlight. ❄️</p>
+
+      <h3>The Agricultural Revolution</h3>
+      <p>Around 12,000 years ago, when humans figured out how to farm, people could finally settle down instead of constantly hunting and gathering. 🌾 This began a whole new pattern of movement! 🏘️ Farmers gradually spread from the Fertile Crescent (modern-day Middle East) outward, bringing their lifestyles, languages, and genes with them. 👨‍🌾</p>
+
+      <p>As farming communities grew into towns and cities, people began traveling for trade, spreading goods and ideas across vast networks. 🛒 These ancient trade routes became superhighways of cultural exchange! 🛣️</p>
+
+      <h3>Historical Migrations</h3>
+      <p>Throughout recorded history, we've seen countless important migrations: 📚 The Silk Road connected China with Europe and brought incredible cultural exchanges. 🧵 The Polynesian seafarers who amazingly navigated the vast Pacific Ocean to settle remote islands. 🚣‍♀️ The Bantu expansion across Africa spread languages and iron-working technologies. ⚒️</p>
+
+      <p>Other migrations were forced and traumatic, like the transatlantic slave trade that forcibly moved millions of Africans to the Americas between the 16th and 19th centuries. 😢 This horrible chapter has deeply impacted cultures, demographics, and societies in permanent ways. 💔</p>
+
+      <h3>Modern Migration</h3>
+      <p>Today, people continue to move around the world, but for different reasons! 🏙️ Some seek better jobs or education, while others flee war, persecution, or natural disasters. 🏫 Modern transportation makes these journeys faster than ever before, though not necessarily easier. ✈️</p>
+
+      <p>In our connected world, migration continues to blend cultures, creating new foods, music, art, and ideas. 🌮 Even languages change and adapt when different groups meet and communicate! 🗣️ The story of human migration is really the story of humanity itself—constantly moving, adapting, and evolving. 🌈</p>
+    `,
+    imageUrl: "https://images.unsplash.com/photo-1569760142069-bc6838de16c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Global map showing human migration routes",
+    imageCredit: "Photo by NASA on Unsplash",
+    publishDate: "2025-04-03",
+    readTime: 11,
+    ageLevel: "Middle School",
+    tags: [
+      { name: "World History", color: "blue" },
+      { name: "Anthropology", color: "purple" }
+    ],
+    author: {
+      name: "Ciaran York",
+      initials: "CY",
+      bio: "Social studies educator with a passion for making history accessible to young learners."
+    },
+    didYouKnow: {
+      fact: "About 3% of the world's population—around 230 million people—live outside the country they were born in! 🌎 If all migrants formed their own country, it would be the fifth largest nation on Earth! 🗺️"
+    },
+    quiz: [
+      {
+        question: "Approximately when did early humans first migrate out of Africa?",
+        options: [
+          "10,000 years ago",
+          "60,000-70,000 years ago",
+          "200,000 years ago",
+          "1 million years ago"
+        ],
+        correctAnswer: 1,
+        explanation: "Scientific evidence shows that early Homo sapiens migrated out of Africa approximately 60,000-70,000 years ago, gradually spreading across the globe."
+      },
+      {
+        question: "Which major event caused humans to begin settling in permanent locations?",
+        options: [
+          "The Ice Age",
+          "The Bronze Age",
+          "The Agricultural Revolution",
+          "The Industrial Revolution"
+        ],
+        correctAnswer: 2,
+        explanation: "The Agricultural Revolution, which began about 12,000 years ago, allowed humans to establish permanent settlements rather than following a nomadic hunter-gatherer lifestyle."
+      },
+      {
+        question: "Which was NOT a reason for human migration throughout history?",
+        options: [
+          "Searching for better climate and resources",
+          "Escaping natural disasters",
+          "Seeking educational opportunities",
+          "Fleeing from conflict or persecution"
+        ],
+        correctAnswer: 2,
+        explanation: "While people today often migrate for education, this was not a common reason for migration throughout most of human history. Educational migration is primarily a modern phenomenon."
+      }
+    ],
+    sources: [
+      {
+        title: "The Journey of Man: A Genetic Odyssey",
+        author: "Wells, S.",
+        publisher: "Princeton University Press",
+        year: 2002
+      },
+      {
+        title: "Maps of Human Migration",
+        publisher: "National Geographic",
+        url: "nationalgeographic.com"
+      }
+    ],
+    relatedArticles: ["2", "5"]
+  },
+  {
+    id: "8",
+    slug: "industrial-revolution-machines-changed-world",
+    title: "The Industrial Revolution: How Machines Changed Our World",
+    description: "Learn how the shift from hand production to machines transformed society, economies, and daily life in ways that still affect us today.",
+    content: `
+      <p>Imagine living in a world where everything had to be made by hand! 🧵 That's exactly how things were for most of human history, until something amazing happened around 250 years ago. 🕰️ The Industrial Revolution totally changed how people lived, worked, and thought about the world—and we're still feeling its effects today! 🏭</p>
+
+      <h3>Steam Power Changes Everything</h3>
+      <p>It all started in Britain in the late 1700s when inventors created machines that could do the work of many people! 💪 The big game-changer was the steam engine, improved by James Watt in 1769. 🧪 For the first time, humans had a powerful, reliable source of energy that wasn't dependent on muscle, wind, or water! 💨</p>
+
+      <p>This new technology led to the creation of factories where goods could be produced much faster and cheaper than ever before. 🏗️ The textile industry was transformed first, with machines like the spinning jenny and power loom replacing hand-spinning and weaving. 👚 A single worker with a machine could now do the work of dozens of people! 😮</p>
+
+      <h3>Transportation Revolution</h3>
+      <p>The Industrial Revolution didn't just change how things were made—it also transformed how people and goods moved around! 🚂 Steam-powered locomotives pulling trains on iron rails could transport people and products at speeds that would have seemed magical to earlier generations. 🛤️</p>
+
+      <p>Steam-powered ships no longer had to rely on wind, making ocean travel more reliable and faster. 🚢 By the late 1800s, these transportation networks connected places across continents and oceans, creating the first truly global economy! 🌐</p>
+
+      <h3>How Life Changed</h3>
+      <p>The Industrial Revolution created huge changes in how people lived. 🏙️ Cities grew rapidly as people moved from farms to work in factories. 🏠 This created both opportunities and problems—more jobs and products, but also overcrowding, pollution, and sometimes dangerous working conditions. 😷</p>
+
+      <p>Children who would have worked on family farms now worked long hours in factories or mines. 👧 Eventually, people began fighting for better conditions, leading to labor reforms and child labor laws. ✊ The middle class expanded, and more people could afford goods that had once been luxuries. 💰</p>
+
+      <h3>The Second Industrial Revolution</h3>
+      <p>By the late 1800s, a Second Industrial Revolution brought even more changes with electricity, petroleum, chemicals, and steel. 💡 Electric lights transformed daily life, allowing people to work and play after dark. 🌃 The telephone, radio, and later the automobile further revolutionized how people lived, worked, and communicated. 📞</p>
+
+      <p>This period also saw the development of assembly lines and mass production methods, which made products like cars affordable to ordinary people for the first time. 🚗 Henry Ford's Model T is a famous example of how these new methods changed everyday life! 🔧</p>
+
+      <p>Every day, we use technologies and live in ways that were made possible by this incredible period of innovation and change. 📱 The Industrial Revolution truly transformed human society forever! 🌟</p>
+    `,
+    imageUrl: "https://images.unsplash.com/photo-1514998667719-f0ea0f814670?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Old steam locomotive, representing the Industrial Revolution",
+    imageCredit: "Photo by Ryan Parker on Unsplash",
+    publishDate: "2025-04-03",
+    readTime: 12,
+    ageLevel: "Middle School",
+    tags: [
+      { name: "World History", color: "blue" },
+      { name: "Technology", color: "green" }
+    ],
+    author: {
+      name: "Ciaran York",
+      initials: "CY",
+      bio: "Social studies educator with a passion for making history accessible to young learners."
+    },
+    didYouKnow: {
+      fact: "Before the Industrial Revolution, it would take a hand-weaver about 120 hours to produce 100 yards of cotton cloth. 😮 With a power loom, this same amount could be made in just 1.5 hours! 🧵 That's 80 times faster! ⚡"
+    },
+    quiz: [
+      {
+        question: "Where did the Industrial Revolution begin?",
+        options: [
+          "United States",
+          "France",
+          "Germany",
+          "Great Britain"
+        ],
+        correctAnswer: 3,
+        explanation: "The Industrial Revolution began in Great Britain in the late 1700s before spreading to other parts of Europe and North America."
+      },
+      {
+        question: "What invention was central to powering the early Industrial Revolution?",
+        options: [
+          "The electric generator",
+          "The steam engine",
+          "The internal combustion engine",
+          "The solar panel"
+        ],
+        correctAnswer: 1,
+        explanation: "The steam engine, improved by James Watt in 1769, provided reliable power that wasn't dependent on muscle, wind, or water, making it central to early industrialization."
+      },
+      {
+        question: "Which industry was first transformed by the Industrial Revolution?",
+        options: [
+          "Automobile manufacturing",
+          "Steel production",
+          "Textile industry",
+          "Electronics"
+        ],
+        correctAnswer: 2,
+        explanation: "The textile industry was the first to be transformed, with machines like the spinning jenny and power loom replacing hand-spinning and weaving."
+      }
+    ],
+    sources: [
+      {
+        title: "The Industrial Revolution: A Very Short Introduction",
+        author: "Griffin, E.",
+        publisher: "Oxford University Press",
+        year: 2010
+      },
+      {
+        title: "Energy and the English Industrial Revolution",
+        author: "Wrigley, E.A.",
+        publisher: "Cambridge University Press",
+        year: 2010
+      }
+    ],
+    relatedArticles: ["5", "7"]
+  },
+  {
+    id: "9",
+    slug: "maya-civilization-masters-americas",
+    title: "Maya Civilization: Masters of the Americas",
+    description: "Explore the incredible achievements of the Maya in mathematics, astronomy, architecture, and writing, creating one of the most sophisticated civilizations in the ancient Americas.",
+    content: `
+      <p>Deep in the lush rainforests of Central America, an amazing civilization built towering pyramids, created incredibly accurate calendars, and developed the only complete writing system in the ancient Americas! 📝 The Maya civilization flourished for over 2,000 years and left behind breathtaking monuments and remarkable knowledge that still impresses us today! 🏯</p>
+
+      <h3>Masters of Time</h3>
+      <p>The Maya were absolutely obsessed with time! ⏰ They created several different calendars, including a 260-day sacred calendar and a 365-day solar calendar that was actually MORE accurate than the calendar Europeans were using at the same time! 🌞</p>
+
+      <p>Maya priests and astronomers carefully tracked the movements of the stars, sun, moon, and planets. 🔭 They could predict solar eclipses and the movements of Venus with amazing accuracy - all without telescopes or modern equipment! ✨ These calculations helped them plan religious ceremonies and agricultural cycles. 🌱</p>
+
+      <h3>Incredible Builders</h3>
+      <p>Have you ever seen pictures of Maya pyramids rising above the jungle canopy? 🌴 These massive structures weren't just amazing to look at—they were built with careful mathematical and astronomical alignments! 📐 For example, the main pyramid at Chichen Itza was designed so that on the spring and fall equinoxes, sunlight creates a shadow pattern that looks like a snake slithering down the stairs! 🐍</p>
+
+      <p>Maya cities like Tikal, Palenque, and Copan featured huge ceremonial plazas, palaces, ball courts, and reservoirs—all built without metal tools, wheeled vehicles, or beasts of burden! 🏙️ They even built raised roads called "sacbeob" (white roads) that connected different Maya cities and were usable even during the rainy season! 🛣️</p>
+
+      <h3>Mathematics and Writing</h3>
+      <p>The Maya developed an advanced writing system using hieroglyphs that could express complex ideas and record historical events. 📜 For many years, researchers couldn't read these symbols, but now we can understand much of what the Maya wrote about their rulers, wars, and religious beliefs! 👑</p>
+
+      <p>They also invented a sophisticated number system that included the concept of zero hundreds of years before Europeans understood it! 0️⃣ Their number system was based on 20 (vigesimal) rather than 10 (decimal) and used dots and bars to represent numbers. 🔢 With this system, they could calculate enormous numbers for their astronomical observations! 💫</p>
+
+      <h3>Daily Life and Society</h3>
+      <p>Maya society was highly organized with a king (called an "ajaw") at the top, followed by nobles, priests, scribes, craftspeople, traders, farmers, and at the bottom, servants. 👨‍👩‍👧‍👦 Most people were farmers who grew maize (corn), beans, and squash—the "three sisters" that are still important foods in the region today! 🌽</p>
+
+      <p>The Maya played a fascinating ball game called "pok-a-tok" on special courts. ⚽ Players had to hit a solid rubber ball through a stone hoop using only their hips, shoulders, and knees! 🏆 The game had deep religious meaning and sometimes ended with ritual sacrifice! 😱</p>
+
+      <h3>The Maya Today</h3>
+      <p>Despite what some people think, the Maya civilization didn't "disappear"! 🤔 While many cities were abandoned around 900 CE for complex reasons including drought and warfare, Maya people and culture continued. 🌧️ Today, millions of Maya descendants still live in Mexico, Guatemala, Belize, Honduras, and El Salvador, maintaining many cultural traditions and speaking Maya languages! 🗣️</p>
+    `,
+    imageUrl: "https://images.unsplash.com/photo-1562651136-0c4cdc7f8f3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Ancient Maya pyramid at Chichen Itza, Mexico",
+    imageCredit: "Photo by Zac Wolff on Unsplash",
+    publishDate: "2025-04-03",
+    readTime: 12,
+    ageLevel: "Middle School",
+    tags: [
+      { name: "Ancient Civilizations", color: "blue" },
+      { name: "Americas", color: "red" }
+    ],
+    author: {
+      name: "Ciaran York",
+      initials: "CY",
+      bio: "Social studies educator with a passion for making history accessible to young learners."
+    },
+    didYouKnow: {
+      fact: "The Maya were the first people in the world to cultivate chocolate! 🍫 They didn't eat it as a sweet treat though—they drank it as a bitter, spicy beverage believed to have special powers! ✨"
+    },
+    quiz: [
+      {
+        question: "Which concept did the Maya understand long before Europeans?",
+        options: [
+          "Electricity",
+          "Gravity",
+          "Zero",
+          "Magnetism"
+        ],
+        correctAnswer: 2,
+        explanation: "The Maya understood and used the concept of zero in their mathematical system centuries before Europeans incorporated it into their mathematics."
+      },
+      {
+        question: "What alignment happens at the main pyramid at Chichen Itza during the equinoxes?",
+        options: [
+          "The pyramid glows blue",
+          "A shadow pattern resembling a snake appears on the stairs",
+          "The pyramid points directly to the North Star",
+          "The sun sets directly behind the pyramid's peak"
+        ],
+        correctAnswer: 1,
+        explanation: "On the spring and fall equinoxes, sunlight creates a shadow pattern on the main pyramid at Chichen Itza that looks like a serpent slithering down the stairs."
+      },
+      {
+        question: "What happened to the Maya civilization?",
+        options: [
+          "They suddenly disappeared without a trace",
+          "They were all killed by European diseases",
+          "They were conquered by the Aztecs",
+          "Many cities were abandoned, but Maya people and culture continued"
+        ],
+        correctAnswer: 3,
+        explanation: "While many Maya cities were abandoned around 900 CE, the civilization didn't disappear. Millions of Maya descendants still live in Central America today, maintaining many cultural traditions."
+      }
+    ],
+    sources: [
+      {
+        title: "The Maya (9th Edition)",
+        author: "Coe, M.D. & Houston, S.D.",
+        publisher: "Thames & Hudson",
+        year: 2015
+      },
+      {
+        title: "Breaking the Maya Code",
+        author: "Coe, M.D.",
+        publisher: "Thames & Hudson",
+        year: 1999
+      }
+    ],
+    relatedArticles: ["1", "5"]
+  },
+  {
+    id: "10",
+    slug: "roman-empire-legacy",
+    title: "The Roman Empire: A Legacy that Shaped the World",
+    description: "From impressive engineering to influential law systems, discover how ancient Rome's innovations and ideas continue to impact our modern world.",
+    content: `
+      <p>Have you ever driven on a straight, well-built road? 🛣️ Used indoor plumbing? 🚿 Said the days of the week or months of the year in English? 📅 If so, you've experienced just a tiny bit of the huge influence the ancient Romans still have on our world today! 🏛️ For over 1,000 years, the Roman Empire spread its language, laws, architecture, and ideas across three continents! 🗺️</p>
+
+      <h3>Engineering Marvels</h3>
+      <p>The Romans were absolutely incredible engineers! 👷‍♂️ They built more than 250,000 miles of roads so solid that some are still in use today! 🚗 Their famous saying was "All roads lead to Rome," and they really meant it! 🗿</p>
+
+      <p>Roman aqueducts used gravity to carry fresh water from mountains into cities, sometimes over distances of 60 miles! 💧 The Pont du Gard aqueduct in France stands 160 feet tall and is still standing after 2,000 years! 🌉 Romans also invented concrete that could even harden underwater, allowing them to build harbors and breakwaters that transformed sea trade. 🚢</p>
+
+      <h3>The Roman System of Government</h3>
+      <p>Before becoming an empire, Rome was a republic where citizens elected representatives—an early form of the democratic systems used in many countries today! 🗳️ They developed the concept of a Senate, established checks and balances on power, and created a sophisticated legal system. ⚖️</p>
+
+      <p>The Twelve Tables, Rome's written code of law from 450 BCE, established the idea that laws should be written down clearly so everyone could know them. 📜 Many modern legal concepts come from Roman law, including the presumption of innocence until proven guilty! 👨‍⚖️</p>
+
+      <h3>Language and Literature</h3>
+      <p>Ever taken Spanish, French, Italian, Portuguese, or Romanian classes? 📚 These are all "Romance languages" that evolved directly from Latin, the language of Rome! 🗣️ Even English, though it's a Germanic language, gets about 60% of its vocabulary from Latin words! 📝</p>
+
+      <p>Many famous Roman writers still influence literature today. 📖 Virgil's epic poem "The Aeneid" influenced countless later works. ✨ Cicero's speeches are still studied as masterpieces of rhetoric, and Ovid's "Metamorphoses" continues to inspire artists and writers. 🎭</p>
+
+      <h3>Architecture and Art</h3>
+      <p>Look at buildings like the U.S. Capitol, the British Museum, or countless courthouses and government buildings around the world—you'll see Roman-style columns, domes, and arches everywhere! 🏢 The Romans perfected the arch, which allowed them to build massive structures like the Colosseum that could hold 50,000 spectators! 😮</p>
+
+      <p>They also created realistic portrait sculptures and beautiful mosaics that influenced art for centuries. 🎨 When people during the Renaissance wanted to create beautiful buildings and artwork, they looked back to Roman examples for inspiration! 👨‍🎨</p>
+
+      <h3>Empire Living</h3>
+      <p>Daily life in Roman cities would seem surprisingly modern in some ways! 🏙️ Romans enjoyed running water, public bathhouses, apartment buildings, shopping districts, and entertainment venues. 🛀 Wealthy Romans had heated floors in their homes called "hypocausts" - an ancient form of radiant heating! 🔥</p>
+
+      <p>Of course, Roman life had very harsh aspects too—slavery was widespread, women had few rights, and entertainment often included violent gladiatorial combat. 🗡️ But many Roman innovations in urban planning, sanitation, and architecture set standards that wouldn't be matched again for over a thousand years after the empire fell! 📉</p>
+    `,
+    imageUrl: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "The Roman Colosseum in Rome, Italy",
+    imageCredit: "Photo by David Köhler on Unsplash",
+    publishDate: "2025-04-03",
+    readTime: 11,
+    ageLevel: "Middle School",
+    tags: [
+      { name: "Ancient History", color: "blue" },
+      { name: "Rome", color: "red" }
+    ],
+    author: {
+      name: "Ciaran York",
+      initials: "CY",
+      bio: "Social studies educator with a passion for making history accessible to young learners."
+    },
+    didYouKnow: {
+      fact: "The Romans had fast food! 🍔 Cities had small food stalls called 'thermopolia' where busy Romans could grab ready-made hot food to eat on the go! 🔥 Archaeologists have found over 150 of these ancient 'fast food joints' just in the ruins of Pompeii! 🍲"
+    },
+    quiz: [
+      {
+        question: "How did Roman aqueducts transport water across long distances?",
+        options: [
+          "Using pumps and pressure systems",
+          "Using waterwheels and pulleys",
+          "Using gravity with a slight downward slope",
+          "Using steam power"
+        ],
+        correctAnswer: 2,
+        explanation: "Roman aqueducts relied on gravity, with a carefully calculated slight downward slope to move water from mountain sources to cities, sometimes over distances of 60 miles."
+      },
+      {
+        question: "What important principle of modern legal systems originated with the Romans?",
+        options: [
+          "Trial by jury",
+          "The presumption of innocence until proven guilty",
+          "The right to remain silent",
+          "Freedom of speech"
+        ],
+        correctAnswer: 1,
+        explanation: "The presumption of innocence until proven guilty is an important legal principle that originated in Roman law and remains fundamental to many modern legal systems."
+      },
+      {
+        question: "Which modern languages evolved directly from Latin?",
+        options: [
+          "English, German, and Dutch",
+          "Russian, Polish, and Czech",
+          "Spanish, French, and Italian",
+          "Arabic, Hebrew, and Greek"
+        ],
+        correctAnswer: 2,
+        explanation: "Spanish, French, Italian, Portuguese, and Romanian are all called 'Romance languages' because they evolved directly from Latin, the language of Rome."
+      }
+    ],
+    sources: [
+      {
+        title: "SPQR: A History of Ancient Rome",
+        author: "Beard, M.",
+        publisher: "Liveright",
+        year: 2015
+      },
+      {
+        title: "The Archaeology of Ancient Rome",
+        author: "Morris, R.L.",
+        publisher: "Cambridge University Press",
+        year: 2010
+      }
+    ],
+    relatedArticles: ["2", "5"]
+  }
