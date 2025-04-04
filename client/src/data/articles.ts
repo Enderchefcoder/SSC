@@ -104,7 +104,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["2", "5"],
-    featured: "Greek geography";
+    featured: "Greek geography"
   },
 
   {
