@@ -104,9 +104,9 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["2", "5"],
-    featured: "Greek geography"
+    featured: "Greek geography";
   },
-  
+
   {
     id: "12",
     slug: "greek-islands-ancient-modern",
@@ -210,9 +210,9 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["11", "2"],
-    featured: "Greek geography"
+    featured: "Greek geography";
   },
-  
+
   {
     id: "13",
     slug: "mount-olympus-home-greek-gods",
@@ -315,7 +315,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["11", "12"],
-    featured: "Greek geography"
+    featured: "Greek geography";
   },
   {
     id: "1",
@@ -408,7 +408,8 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["4", "5"],
-    worksheets: ["1"]
+    worksheets: ["1"],
+    featured: "Great Pyramids";
   },
   {
     id: "2",
@@ -498,7 +499,8 @@ export const articles: Article[] = [
         year: 2015
       }
     ],
-    relatedArticles: ["1", "5"]
+    relatedArticles: ["1", "5"],
+    featured: "Ancient Greece";
   },
   {
     id: "3",
@@ -516,7 +518,7 @@ export const articles: Article[] = [
       <h3>Life in the Goldfields</h3>
       <p>Looking for gold was super hard and dangerous work. ⛏️ The first forty-niners used simple techniques like panning, where they swirled river water in a shallow pan to separate gold from sand and gravel. 💦 As the easy-to-find gold disappeared, miners had to develop more complicated methods like sluice boxes, hydraulic mining, and digging deep underground. 🕳️</p>
 
-      <p>Most miners lived in tents or rough cabins without many comforts. 🏕️ Food, tools, and basic supplies cost a fortune because everything had to be shipped from far away. 💰 Many miners spent every penny they earned just to survive, and most never actually got rich. 😢</p>
+      <p>Most miners lived in tents or rough cabins without many comforts. 🏕️Food, tools, and basic supplies cost a fortune because everything had to be shipped from far away. 💰 Many miners spent every penny they earned just to survive, and most never actually got rich. 😢</p>
 
       <h3>A Diverse Population</h3>
       <p>The Gold Rush brought people from all over the world together! 🌏 Miners came from Mexico, Chile, China, Australia, Europe, and the eastern United States. 🧳 This created one of America's first truly multicultural regions, though sadly there was also a lot of discrimination and conflict. 👥</p>
@@ -593,7 +595,8 @@ export const articles: Article[] = [
         year: 2018
       }
     ],
-    relatedArticles: ["5", "6"]
+    relatedArticles: ["5", "6"],
+    featured: "California Gold Rush";
   },
   {
     id: "4",
@@ -668,7 +671,8 @@ export const articles: Article[] = [
         explanation: "The Dream Stela is a stone tablet between the Sphinx's paws telling the story of Pharaoh Thutmose IV's dream."
       }
     ],
-    relatedArticles: ["1", "5"]
+    relatedArticles: ["1", "5"],
+    featured: "Great Sphinx";
   },
   {
     id: "5",
@@ -759,7 +763,8 @@ export const articles: Article[] = [
         year: 1977
       }
     ],
-    relatedArticles: ["1", "2"]
+    relatedArticles: ["1", "2"],
+    featured: "Mesopotamia";
   },
   {
     id: "6",
@@ -857,46 +862,9 @@ export const articles: Article[] = [
         year: 2020
       }
     ],
-    relatedArticles: ["3", "5"]
-  }
-];
-
-export const getArticleBySlug = (slug: string): Article | undefined => {
-  return articles.find(article => article.slug === slug);
-};
-
-export const getArticleById = (id: string): Article | undefined => {
-  return articles.find(article => article.id === id);
-};
-
-export const getRelatedArticles = (articleId: string): Article[] => {
-  const article = getArticleById(articleId);
-  if (!article || !article.relatedArticles) return [];
-
-  return article.relatedArticles
-    .map(id => getArticleById(id))
-    .filter((article): article is Article => article !== undefined);
-};
-
-export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'): Article[] => {
-  query = query.toLowerCase();
-
-  return articles.filter(article => {
-    // Filter by age level if specified
-    if (ageLevel !== 'All' && article.ageLevel !== ageLevel) {
-      return false;
-    }
-
-    // Search in title, description, and content
-    return (
-      article.title.toLowerCase().includes(query) ||
-      article.description.toLowerCase().includes(query) ||
-      article.content.toLowerCase().includes(query) ||
-      article.tags.some(tag => tag.name.toLowerCase().includes(query))
-    );
-  });
-};
-
+    relatedArticles: ["3", "5"],
+    featured: "United States";
+  },
   {
     id: "7",
     slug: "human-migration-patterns",
@@ -991,7 +959,8 @@ export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'):
         url: "nationalgeographic.com"
       }
     ],
-    relatedArticles: ["2", "5"]
+    relatedArticles: ["2", "5"],
+    featured: "Human Migration";
   },
   {
     id: "8",
@@ -1090,7 +1059,8 @@ export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'):
         year: 2010
       }
     ],
-    relatedArticles: ["5", "7"]
+    relatedArticles: ["5", "7"],
+    featured: "Industrial Revolution";
   },
   {
     id: "9",
@@ -1106,7 +1076,7 @@ export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'):
       <p>Maya priests and astronomers carefully tracked the movements of the stars, sun, moon, and planets. 🔭 They could predict solar eclipses and the movements of Venus with amazing accuracy - all without telescopes or modern equipment! ✨ These calculations helped them plan religious ceremonies and agricultural cycles. 🌱</p>
 
       <h3>Incredible Builders</h3>
-      <p>Have you ever seen pictures of Maya pyramids rising above the jungle canopy? 🌴 These massive structures weren't just amazing to look at—they were built with careful mathematical and astronomical alignments! 📐 For example, the main pyramid at Chichen Itza was designed so that on the spring and fall equinoxes, sunlight creates a shadow pattern that looks like a snake slithering down the stairs! 🐍</p>
+      <p>Have you ever seen pictures of Maya pyramids rising above the jungle canopy? 🌴 These massive structures weren't just amazing to look at—they were built with careful mathematical and astronomical alignments! 📐 For example, the main pyramid at Chichen Itza was designed so that on the spring and fall equinoxes, sunlight creates a shadowpattern that looks like a snake slithering down the stairs! 🐍</p>
 
       <p>Maya cities like Tikal, Palenque, and Copan featured huge ceremonial plazas, palaces, ball courts, and reservoirs—all built without metal tools, wheeled vehicles, or beasts of burden! 🏙️ They even built raised roads called "sacbeob" (white roads) that connected different Maya cities and were usable even during the rainy season! 🛣️</p>
 
@@ -1190,7 +1160,8 @@ export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'):
         year: 1999
       }
     ],
-    relatedArticles: ["1", "5"]
+    relatedArticles: ["1", "5"],
+    featured: "Maya Civilization";
   },
   {
     id: "10",
@@ -1292,5 +1263,44 @@ export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'):
         year: 2010
       }
     ],
-    relatedArticles: ["2", "5"]
+    relatedArticles: ["2", "5"],
+    featured: "Roman Empire";
   }
+
+];
+
+export const getArticleBySlug = (slug: string): Article | undefined => {
+  return articles.find(article => article.slug === slug);
+};
+
+export const getArticleById = (id: string): Article | undefined => {
+  return articles.find(article => article.id === id);
+};
+
+export const getRelatedArticles = (articleId: string): Article[] => {
+  const article = getArticleById(articleId);
+  if (!article || !article.relatedArticles) return [];
+
+  return article.relatedArticles
+    .map(id => getArticleById(id))
+    .filter((article): article is Article => article !== undefined);
+};
+
+export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'): Article[] => {
+  query = query.toLowerCase();
+
+  return articles.filter(article => {
+    // Filter by age level if specified
+    if (ageLevel !== 'All' && article.ageLevel !== ageLevel) {
+      return false;
+    }
+
+    // Search in title, description, and content
+    return (
+      article.title.toLowerCase().includes(query) ||
+      article.description.toLowerCase().includes(query) ||
+      article.content.toLowerCase().includes(query) ||
+      article.tags.some(tag => tag.name.toLowerCase().includes(query))
+    );
+  });
+};
