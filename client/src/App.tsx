@@ -14,6 +14,8 @@ import EditArticlePage from "@/pages/EditArticlePage";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ArticleImporter from "@/components/ArticleImporter";
+import GreekGods from "./pages/GreekGods";
+import EMuseum from "./pages/EMuseum";
 
 function Router() {
   return (
@@ -31,6 +33,9 @@ function Router() {
             {(params) => <EditArticlePage params={params} />}
           </Route>
           <Route path="/import-article" component={ArticleImporter} />
+          <Route path="/greek-gods" element={<GreekGods />} />
+          <Route path="/e-museum" element={<EMuseum />} />
+          <Route path="/common-core" element={<Articles />} />
           <Route component={NotFound} />
         </Switch>
       </main>
