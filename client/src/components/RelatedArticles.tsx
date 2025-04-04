@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 
 interface RelatedArticlesProps {
   articles: Article[];
+  featured?: string; // Added featured property
 }
 
 const getTagColorClasses = (color: string) => {
@@ -23,7 +24,7 @@ const getTagColorClasses = (color: string) => {
   }
 };
 
-const RelatedArticles = ({ articles }: RelatedArticlesProps) => {
+const RelatedArticles = ({ articles, featured = "" }: RelatedArticlesProps) => {
   if (!articles.length) return null;
 
   return (
@@ -32,10 +33,10 @@ const RelatedArticles = ({ articles }: RelatedArticlesProps) => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">Related Articles</h2>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-            Discover more about ancient civilizations
+            Discover more about {featured || "ancient civilizations"}
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {articles.map((article) => (
             <Link key={article.id} href={`/article/${article.slug}`}>

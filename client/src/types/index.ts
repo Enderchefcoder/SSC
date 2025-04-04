@@ -46,6 +46,7 @@ export type Article = {
   }[];
   relatedArticles?: string[];
   worksheets?: string[];
+  featured?: string;
 };
 
 export type Resource = {

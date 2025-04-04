@@ -2,6 +2,322 @@ import { Article, AgeLevelFilter } from "@/types";
 
 export const articles: Article[] = [
   {
+    id: "11",
+    slug: "ancient-greek-geography",
+    title: "Ancient Greek Geography: The Landscape that Shaped a Civilization",
+    description: "Discover how mountains, islands, and the Mediterranean Sea influenced Greek development, city-states, and the unique Greek way of life.",
+    content: `
+      <p>Did you know that Greece is one of the most mountainous countries in Europe? 🏔️ And it has one of the longest coastlines in the world relative to its size! 🌊 These geographic features didn't just make Greece beautiful—they actually shaped how its ancient civilization developed in fascinating ways! 🧭</p>
+
+      <h3>A Land of Mountains and Islands</h3>
+      <p>Ancient Greece wasn't a unified country like modern nations. 🗺️ Mountains divided the mainland into many separate valleys and plains, which led to the development of independent city-states like Athens, Sparta, and Thebes. 🏛️ These mountains made travel difficult by land, which is why each city-state developed its own unique government, army, and customs! 🏙️</p>
+
+      <p>Greece also includes over 2,000 islands scattered throughout the Aegean and Ionian seas! 🏝️ Island city-states like Crete, Rhodes, and Lesbos developed their own distinct cultures while still maintaining connections with the mainland. 🚢</p>
+
+      <h3>The Mediterranean Climate</h3>
+      <p>Most of Greece has what we call a "Mediterranean climate" with hot, dry summers and mild, rainy winters. ☀️ This climate was perfect for growing crops like olives, grapes, and figs, which became staples of the Greek diet and economy. 🫒</p>
+
+      <p>The limited amount of flat land suitable for farming meant Ancient Greeks had to be creative with their agriculture. 👨‍🌾 They terraced hillsides to create more farming space and carefully managed their olive groves and vineyards. 🍷 Since only about 20-30% of Greek land could be farmed, food was sometimes scarce, which contributed to Greek colonization of other Mediterranean regions. 🌱</p>
+
+      <h3>The Sea as a Highway</h3>
+      <p>With so many mountains making land travel difficult, the Ancient Greeks turned to the sea! 🌊 The Mediterranean became their highway, connecting Greek cities and islands through maritime trade routes. ⛵</p>
+
+      <p>Did you know that no place in Greece is more than 60 miles from the sea? 😮 This close relationship with the water led the Greeks to become expert shipbuilders and sailors. 🚣‍♂️ Cities with good harbors, like Athens with its port at Piraeus, became powerful trading centers that connected to Egypt, Phoenicia (modern Lebanon), and other Mediterranean civilizations. 🏮</p>
+
+      <h3>Natural Resources</h3>
+      <p>While Greece lacked some natural resources like lumber and precious metals, it had excellent marble and clay deposits. 🧱 Greek sculptors created amazing statues using local marble from Mount Pentelicus near Athens. 🗿 Rich clay deposits allowed potters to create beautiful, distinctive pottery that was exported throughout the Mediterranean. 🏺</p>
+
+      <p>The shortage of certain resources encouraged Greeks to establish colonies and trading networks across the Mediterranean and Black Sea regions. 🌍 This expansion spread Greek culture, language, and ideas throughout these regions. 🔤</p>
+
+      <h3>Defending the Land</h3>
+      <p>Geography also influenced how Greeks defended their territories! 🛡️ Mountain passes could be held by small numbers of soldiers against much larger armies—remember the famous Battle of Thermopylae where 300 Spartan warriors held off thousands of Persian soldiers in a narrow mountain pass? 🗡️</p>
+
+      <p>The sea provided both opportunity and danger. 🌊 It allowed Greek cities to build powerful navies, like Athens with its fleet of fast triremes, but it also exposed them to raids and invasions from other seafaring peoples. ⚓</p>
+
+      <p>The next time you look at a map of Greece with its jagged coastlines, scattered islands, and rugged mountains, remember that these geographic features helped create one of history's most influential civilizations! 🌟</p>
+    `,
+    imageUrl: "https://images.unsplash.com/photo-1503152394-c571994fd383?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Ancient Greek ruins overlooking the Mediterranean Sea",
+    imageCredit: "Photo by Arthur Yeti on Unsplash",
+    publishDate: "2025-04-03",
+    readTime: 10,
+    ageLevel: "Middle School",
+    tags: [
+      { name: "Ancient Greece", color: "blue" },
+      { name: "Geography", color: "green" }
+    ],
+    author: {
+      name: "Ciaran York",
+      initials: "CY",
+      bio: "Social studies educator with a passion for making history accessible to young learners."
+    },
+    didYouKnow: {
+      fact: "The Greek mainland has over 9,000 miles of coastline! 🌊 That's more than the entire west coast of the United States! 🗺️ This extensive coastline meant that fishing and sea trade became essential parts of Greek life and economy! 🐟"
+    },
+    quiz: [
+      {
+        question: "How did mountains influence the development of ancient Greece?",
+        options: [
+          "They provided valuable mining resources",
+          "They created a barrier that kept out invaders",
+          "They divided the land into separate regions that developed into independent city-states",
+          "They were used as religious worship sites"
+        ],
+        correctAnswer: 2,
+        explanation: "Mountains divided Greece into many separate valleys and plains, which led to the development of independent city-states, each with its own government and customs."
+      },
+      {
+        question: "Why did the ancient Greeks become skilled sailors?",
+        options: [
+          "They enjoyed water sports",
+          "Mountains made land travel difficult, so they relied on sea routes",
+          "They wanted to escape the hot climate",
+          "They were following religious traditions"
+        ],
+        correctAnswer: 1,
+        explanation: "With mountains making land travel difficult, ancient Greeks turned to the sea as their highway, becoming skilled sailors and creating maritime trade routes."
+      },
+      {
+        question: "What percentage of Greek land was suitable for farming?",
+        options: [
+          "About 20-30%",
+          "About 50-60%",
+          "About 70-80%",
+          "Almost all of it"
+        ],
+        correctAnswer: 0,
+        explanation: "Only about 20-30% of Greek land could be farmed, which led to food scarcity at times and contributed to Greek colonization of other Mediterranean regions."
+      }
+    ],
+    sources: [
+      {
+        title: "The Geography of Ancient Greece",
+        author: "Hammond, N.G.L.",
+        publisher: "Oxford University Press",
+        year: 1994
+      },
+      {
+        title: "The Aegean World: A Guide to the Cycladic, Minoan, and Mycenaean Antiquities in the Ashmolean Museum",
+        author: "Sherratt, S.",
+        publisher: "Ashmolean Museum",
+        year: 2000
+      }
+    ],
+    relatedArticles: ["2", "5"],
+    featured: "Greek geography"
+  },
+  
+  {
+    id: "12",
+    slug: "greek-islands-ancient-modern",
+    title: "Greek Islands: Ancient Treasures and Modern Paradise",
+    description: "Explore the fascinating history and stunning beauty of Greece's most famous islands, from Crete's ancient Minoan palaces to Santorini's breathtaking views.",
+    content: `
+      <p>Have you ever dreamed of visiting islands with crystal clear blue water, white-washed buildings, and thousands of years of amazing history? 🏝️ The Greek islands are like a magical collection of unique gems scattered across the sparkling Aegean and Ionian seas! 🌊 With over 6,000 islands (though only about 227 are inhabited), each has its own special character and stories to tell! 🗿</p>
+
+      <h3>Crete: Birthplace of Europe's First Advanced Civilization</h3>
+      <p>The largest Greek island, Crete, was home to Europe's earliest advanced civilization—the Minoans! 👑 Around 4,000 years ago, while much of Europe was still in the Bronze Age, the Minoans were building massive palace complexes with indoor plumbing, colorful art, and complex architecture! 🏰</p>
+
+      <p>The most famous Minoan palace is Knossos, which according to Greek mythology was home to the legendary King Minos and the terrifying half-man, half-bull Minotaur who lived in a labyrinth beneath the palace! 🐂 Archaeologists discovered this amazing site in 1900, revealing beautiful frescoes (wall paintings) showing Minoan life, including the famous "bull-leaping" scenes where athletes performed acrobatic feats over charging bulls! 🤸‍♂️</p>
+
+      <h3>Santorini: The Volcano that Changed History</h3>
+      <p>Santorini might be the most photographed Greek island, with its stunning white buildings perched on dramatic cliffs overlooking a sunken volcanic crater! 📸 But did you know this picturesque island has an explosive past? 💥</p>
+
+      <p>Around 1600 BCE, Santorini (then called Thera) experienced one of the largest volcanic eruptions in human history! 🌋 This massive explosion destroyed the thriving Minoan settlement of Akrotiri, burying it under volcanic ash—similar to what happened at Pompeii, but 1,500 years earlier! 😮 Archaeologists have uncovered this "Bronze Age Pompeii" with amazingly well-preserved multi-story buildings, pottery, and beautiful frescoes! 🏺</p>
+
+      <p>Some scientists believe this catastrophic eruption may have inspired Plato's story of Atlantis, the legendary advanced civilization that sank beneath the waves! 🌊 The tsunami waves from the eruption devastated coastal settlements across the Aegean, potentially contributing to the decline of Minoan civilization on Crete. 🌍</p>
+
+      <h3>Rhodes: Home of the Colossus</h3>
+      <p>The island of Rhodes once boasted one of the Seven Wonders of the Ancient World—the Colossus of Rhodes! 🗽 This massive bronze statue of the Greek sun god Helios stood over 100 feet tall and guarded the harbor entrance. ☀️ Though it stood for only 54 years before being toppled by an earthquake in 226 BCE, its impressive size and engineering inspired awe throughout the ancient world! 😲</p>
+
+      <p>During the Middle Ages, Rhodes became an important base for the Knights Hospitaller, who built impressive fortifications that still stand today! 🏰 The Medieval Old Town of Rhodes is one of the best-preserved medieval towns in Europe and is now a UNESCO World Heritage site! 🛡️</p>
+
+      <h3>Delos: The Sacred Island</h3>
+      <p>The tiny island of Delos was one of the most sacred places in the ancient Greek world! ✨ According to mythology, it was the birthplace of the twin gods Apollo and Artemis. 👫 Because of its sacred status, Delos became a major religious center with impressive temples and sanctuaries. 🏛️</p>
+
+      <p>Interestingly, because Delos was considered so holy, no one was allowed to be born or die on the island! 👶 Pregnant women and people who were seriously ill had to be transported to nearby islands! 🚣‍♀️ Today, Delos is an uninhabited archaeological site where visitors can walk among the ruins of this once-thriving sacred center. 🏗️</p>
+
+      <h3>The Islands Today</h3>
+      <p>The Greek islands continue to enchant visitors with their blend of stunning natural beauty, rich history, and vibrant culture! 🎭 From the party beaches of Mykonos to the quiet fishing villages of less-visited islands, there's something magical about these sun-drenched lands surrounded by the crystal-clear Mediterranean. 🌞</p>
+
+      <p>Island-hopping remains one of the best ways to experience the diversity of Greek island culture, as each island maintains its own unique traditions, architecture, and even dialect! 🚢 Local festivals, food specialties, and crafts vary from island to island, creating a rich tapestry of Greek island life that has endured for thousands of years! 💃</p>
+    `,
+    imageUrl: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "White-washed buildings on Santorini island with blue domed churches overlooking the Aegean Sea",
+    imageCredit: "Photo by Ryan Spencer on Unsplash",
+    publishDate: "2025-04-03",
+    readTime: 11,
+    ageLevel: "Middle School",
+    tags: [
+      { name: "Ancient Greece", color: "blue" },
+      { name: "Geography", color: "green" }
+    ],
+    author: {
+      name: "Ciaran York",
+      initials: "CY",
+      bio: "Social studies educator with a passion for making history accessible to young learners."
+    },
+    didYouKnow: {
+      fact: "The island of Ikaria is named after Icarus of Greek mythology who, according to legend, fell into the sea nearby when his wax wings melted after flying too close to the sun! ☀️ Today, Ikaria is famous as one of the world's 'Blue Zones' where people live exceptionally long lives—many over 100 years old! 👵"
+    },
+    quiz: [
+      {
+        question: "Which ancient civilization built the palace complex at Knossos on Crete?",
+        options: [
+          "Mycenaeans",
+          "Spartans",
+          "Minoans",
+          "Dorians"
+        ],
+        correctAnswer: 2,
+        explanation: "The Minoans built the palace at Knossos on Crete around 4,000 years ago. It was Europe's earliest advanced civilization."
+      },
+      {
+        question: "What major geological event occurred on Santorini around 1600 BCE?",
+        options: [
+          "A massive earthquake",
+          "A volcanic eruption",
+          "A tsunami",
+          "A meteorite impact"
+        ],
+        correctAnswer: 1,
+        explanation: "Around 1600 BCE, Santorini experienced one of the largest volcanic eruptions in human history, burying the Minoan settlement of Akrotiri under ash."
+      },
+      {
+        question: "Which Greek island was home to one of the Seven Wonders of the Ancient World?",
+        options: [
+          "Crete",
+          "Santorini",
+          "Rhodes",
+          "Delos"
+        ],
+        correctAnswer: 2,
+        explanation: "Rhodes was home to the Colossus of Rhodes, a massive bronze statue of the Greek sun god Helios that stood over 100 feet tall."
+      }
+    ],
+    sources: [
+      {
+        title: "The Aegean Bronze Age",
+        author: "Cline, E.H.",
+        publisher: "Cambridge University Press",
+        year: 2010
+      },
+      {
+        title: "The Complete Greek Islands",
+        author: "Whitney, B.",
+        publisher: "Thames & Hudson",
+        year: 2019
+      }
+    ],
+    relatedArticles: ["11", "2"],
+    featured: "Greek geography"
+  },
+  
+  {
+    id: "13",
+    slug: "mount-olympus-home-greek-gods",
+    title: "Mount Olympus: Home of the Greek Gods",
+    description: "Explore Greece's highest mountain, both as a natural wonder and the legendary dwelling place of Zeus and the Olympian gods of Greek mythology.",
+    content: `
+      <p>Did you know that the gods of ancient Greek mythology had their very own mountain address? 🏔️ Mount Olympus, the highest mountain in Greece, was believed to be the home of Zeus and the other major gods! ⚡ Standing tall at 9,573 feet (2,918 meters), this majestic peak has inspired awe, stories, and adventures for thousands of years! 🌟</p>
+
+      <h3>The Real Mountain</h3>
+      <p>Mount Olympus isn't just one peak but actually a massive mountain range with 52 separate peaks and deep gorges between them! 🗻 It's located in northern Greece near the coast of the Aegean Sea, creating an impressive sight as its snow-capped summits rise dramatically from near sea level! 🌊</p>
+
+      <p>The mountain's highest point, Mytikas peak, was first reached by humans in 1913 when two climbers (a Greek and a Swiss) made the challenging journey to its summit. 🧗‍♂️ Today, thousands of hikers and climbers visit Mount Olympus each year to experience its incredible beauty! 🌲</p>
+
+      <p>The mountain is home to an amazing variety of plants and animals! 🌺 Scientists have identified over 1,700 plant species here, some of which are found nowhere else on Earth! 🦊 The rich forests on its slopes have been protected as Greece's first National Park since 1938. 🌳</p>
+
+      <h3>The Mythical Home of the Gods</h3>
+      <p>In ancient Greek mythology, Mount Olympus wasn't just a mountain—it was the glorious home of the twelve Olympian gods! 👑 The Greeks imagined that above the mountain's visible peaks was a hidden realm where the gods lived in magnificent palaces of marble and gold! ✨</p>
+
+      <p>Zeus, king of the gods and ruler of the sky, presided over a divine council that included powerful deities like Hera, Poseidon, Athena, Apollo, Artemis, Ares, Aphrodite, Hermes, and others. 🏛️ From their mountain home, these gods observed the activities of mortals, occasionally intervening in human affairs when it suited their purposes! 👀</p>
+
+      <p>The ancient Greeks believed that storms and thunder were signs of Zeus's anger, and that was especially true of the impressive thunderstorms that often form around Olympus's peaks! ⛈️ The mountain was often shrouded in clouds, which reinforced the belief that it was a place between earth and heaven where mortals could not easily see the gods! ☁️</p>
+
+      <h3>Olympus in Ancient Literature</h3>
+      <p>Mount Olympus appears frequently in ancient Greek literature, especially in Homer's epic poems the Iliad and the Odyssey! 📚 In these famous works, the gods hold councils on Olympus, argue amongst themselves, and plot ways to help or hinder the human heroes fighting in the Trojan War. 🗡️</p>
+
+      <p>One famous description from Homer tells us: "Olympus, where they say the seat of the gods stands firm forever. Not by winds is it shaken, nor ever wet with rain, nor does snow come near it, but clear weather spreads cloudless about it, and a white radiance stretches over it." ☀️ This portrayal of Olympus as a place of eternal perfect weather added to its mythical reputation! 🌈</p>
+
+      <h3>Visiting Olympus Today</h3>
+      <p>Today, visitors to Greece can explore the mythical mountain for themselves! 🎒 The town of Litochoro at the base of Mount Olympus serves as a gateway for hikers and climbers. 🏠 There are several well-marked trails ranging from easy walks through lower forests to challenging climbs to the higher summits. 🥾</p>
+
+      <p>Along the way, hikers might visit the ancient site of Dion at the mountain's foot, which was a religious center where ancient Macedonians worshipped the Olympian gods. 🏺 They can also see the throne of Zeus, a natural rock formation that resembles a massive seat fit for the king of the gods! 🪑</p>
+
+      <p>Whether you're interested in Greek mythology, natural beauty, or adventurous hiking, Mount Olympus offers a chance to connect with one of the most important geographic and cultural landmarks of ancient Greece! 🌍</p>
+    `,
+    imageUrl: "https://images.unsplash.com/photo-1598100931767-988d8be3b320?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Snow-capped peaks of Mount Olympus rising above the clouds",
+    imageCredit: "Photo by Dimitris Kiriakakis on Unsplash",
+    publishDate: "2025-04-03",
+    readTime: 10,
+    ageLevel: "Middle School",
+    tags: [
+      { name: "Greek Mythology", color: "purple" },
+      { name: "Geography", color: "green" }
+    ],
+    author: {
+      name: "Ciaran York",
+      initials: "CY",
+      bio: "Social studies educator with a passion for making history accessible to young learners."
+    },
+    didYouKnow: {
+      fact: "The name 'Olympus' appears in many places around the ancient Greek world! 🗺️ At least 20 different mountains were called Olympus in ancient times! 🏔️ But the one in northern Greece was considered the most important as the home of the major gods! ⚡"
+    },
+    quiz: [
+      {
+        question: "How tall is Mount Olympus at its highest peak?",
+        options: [
+          "2,918 meters (9,573 feet)",
+          "4,807 meters (15,771 feet)",
+          "8,849 meters (29,032 feet)",
+          "1,500 meters (4,921 feet)"
+        ],
+        correctAnswer: 0,
+        explanation: "Mount Olympus reaches 2,918 meters (9,573 feet) at its highest point, Mytikas peak, making it the tallest mountain in Greece."
+      },
+      {
+        question: "When was the highest peak of Mount Olympus first climbed by humans?",
+        options: [
+          "Ancient times",
+          "1513",
+          "1913",
+          "1953"
+        ],
+        correctAnswer: 2,
+        explanation: "The highest peak of Mount Olympus was first reached in 1913 by a Greek and a Swiss climber, relatively recently considering its historical importance."
+      },
+      {
+        question: "According to Greek mythology, who was the ruler of Mount Olympus?",
+        options: [
+          "Poseidon",
+          "Hades",
+          "Athena",
+          "Zeus"
+        ],
+        correctAnswer: 3,
+        explanation: "Zeus, king of the gods and ruler of the sky, was the ruler of Mount Olympus and presided over the council of Olympian gods."
+      }
+    ],
+    sources: [
+      {
+        title: "Greek Gods and Heroes",
+        author: "Kershaw, S.",
+        publisher: "Oxford University Press",
+        year: 2018
+      },
+      {
+        title: "Mountains of the Gods: The Mythical Landscapes of Greece",
+        author: "Pallis, A.",
+        publisher: "Thames & Hudson",
+        year: 2009
+      }
+    ],
+    relatedArticles: ["11", "12"],
+    featured: "Greek geography"
+  }
+  {
     id: "1",
     slug: "great-pyramids-wonders-ancient-world",
     title: "The Great Pyramids: Wonders of the Ancient World",
