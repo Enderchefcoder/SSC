@@ -37,6 +37,42 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.json({ text });
   });
 
+  // Newsletter signup endpoint
+  router.post("/api/newsletter-signup", async (req, res) => {
+    const { email, adminEmail } = req.body;
+
+    try {
+      // Store the email in database (if we're connected to one)
+      try {
+        await db.newsletter.create({
+          data: {
+            email,
+            subscribedAt: new Date(),
+          },
+        });
+      } catch (error) {
+        console.warn("Could not save to database, continuing with notification", error);
+      }
+
+      // In a real app, we would use an email service like Nodemailer, SendGrid, etc.
+      // For now, we'll just log this to the console
+      console.log(`New newsletter signup: ${email}`);
+      console.log(`Notification would be sent to: ${adminEmail}`);
+      
+      // Store in our local storage as a backup
+      const subscribers = storage.get('newsletter-subscribers') || [];
+      if (!subscribers.includes(email)) {
+        subscribers.push(email);
+        storage.set('newsletter-subscribers', subscribers);
+      }
+
+      res.json({ success: true });
+    } catch (error) {
+      console.error("Error processing newsletter signup:", error);
+      res.status(500).json({ error: "Failed to process signup" });
+    }
+  });
+
   // Article summarization endpoint
   router.post("/api/summarize-text", async (req, res) => {
     const { text } = req.body;
