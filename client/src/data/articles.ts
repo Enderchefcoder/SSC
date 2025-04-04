@@ -672,7 +672,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["1", "5"],
-    featured: "Great Sphinx";
+    featured: "Great Sphinx"
   },
   {
     id: "5",
@@ -764,7 +764,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["1", "2"],
-    featured: "Mesopotamia";
+    featured: "Mesopotamia"
   },
   {
     id: "6",
@@ -863,7 +863,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["3", "5"],
-    featured: "United States";
+    featured: "United States"
   },
   {
     id: "7",
@@ -960,7 +960,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["2", "5"],
-    featured: "Human Migration";
+    featured: "Human Migration"
   },
   {
     id: "8",
@@ -1060,7 +1060,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["5", "7"],
-    featured: "Industrial Revolution";
+    featured: "Industrial Revolution"
   },
   {
     id: "9",
@@ -1161,7 +1161,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["1", "5"],
-    featured: "Maya Civilization";
+    featured: "Maya Civilization"
   },
   {
     id: "10",
@@ -1264,7 +1264,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["2", "5"],
-    featured: "Roman Empire";
+    featured: "Roman Empire"
   }
 
 ];
