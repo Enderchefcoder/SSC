@@ -210,7 +210,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["11", "2"],
-    featured: "Greek geography";
+    featured: "Greek geography"
   },
 
   {
@@ -315,7 +315,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["11", "12"],
-    featured: "Greek geography";
+    featured: "Greek geography"
   },
   {
     id: "1",
