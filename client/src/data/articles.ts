@@ -316,7 +316,7 @@ export const articles: Article[] = [
     ],
     relatedArticles: ["11", "12"],
     featured: "Greek geography"
-  }
+  },
   {
     id: "1",
     slug: "great-pyramids-wonders-ancient-world",
