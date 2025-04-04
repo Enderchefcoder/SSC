@@ -596,7 +596,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["5", "6"],
-    featured: "California Gold Rush";
+    featured: "California Gold Rush"
   },
   {
     id: "4",
