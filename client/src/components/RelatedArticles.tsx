@@ -39,35 +39,37 @@ const RelatedArticles = ({ articles, featured = "" }: RelatedArticlesProps) => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {articles.map((article) => (
-            <Link key={article.id} href={`/article/${article.slug}`}>
-              <a className="flex flex-col rounded-lg shadow-sm overflow-hidden">
-                <div className="flex-shrink-0">
-                  <img 
-                    className="h-48 w-full object-cover" 
-                    src={article.imageUrl} 
-                    alt={article.imageAlt} 
-                  />
-                </div>
-                <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-primary-600">
-                      {article.tags.slice(0, 1).map((tag, index) => (
-                        <span 
-                          key={index} 
-                          className={`inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium ${getTagColorClasses(tag.color)}`}
-                        >
-                          {tag.name}
-                        </span>
-                      ))}
-                    </p>
-                    <div className="block mt-2">
-                      <p className="text-xl font-semibold text-gray-900 font-serif">{article.title}</p>
-                      <p className="mt-3 text-base text-gray-500">{article.description}</p>
+            <div key={article.id} className="flex flex-col rounded-lg shadow-sm overflow-hidden">
+              <Link href={`/article/${article.slug}`}>
+                <div className="cursor-pointer">
+                  <div className="flex-shrink-0">
+                    <img 
+                      className="h-48 w-full object-cover" 
+                      src={article.imageUrl} 
+                      alt={article.imageAlt} 
+                    />
+                  </div>
+                  <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                    <div className="flex-1">
+                      <p className="text-sm font-medium text-primary-600">
+                        {article.tags.slice(0, 1).map((tag, index) => (
+                          <span 
+                            key={index} 
+                            className={`inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium ${getTagColorClasses(tag.color)}`}
+                          >
+                            {tag.name}
+                          </span>
+                        ))}
+                      </p>
+                      <div className="block mt-2">
+                        <p className="text-xl font-semibold text-gray-900 font-serif">{article.title}</p>
+                        <p className="mt-3 text-base text-gray-500">{article.description}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </a>
-            </Link>
+              </Link>
+            </div>
           ))}
         </div>
       </div>
