@@ -500,7 +500,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["1", "5"],
-    featured: "Ancient Greece";
+    featured: "Ancient Greece"
   },
   {
     id: "3",
