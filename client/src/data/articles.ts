@@ -106,7 +106,7 @@ export const articles: Article[] = [
     relatedArticles: ["2", "5"],
     featured: "Greek geography"
   },
-  
+
   {
     id: "12",
     slug: "greek-islands-ancient-modern",
@@ -212,7 +212,7 @@ export const articles: Article[] = [
     relatedArticles: ["11", "2"],
     featured: "Greek geography"
   },
-  
+
   {
     id: "13",
     slug: "mount-olympus-home-greek-gods",
@@ -514,7 +514,7 @@ export const articles: Article[] = [
       <p>San Francisco exploded from a tiny settlement of about 200 people in 1846 to a booming city of around 36,000 by 1852! 📈 Towns with fun names like Rough and Ready, Hangtown, and Poker Flat popped up overnight throughout the hills. 🏠</p>
 
       <h3>Life in the Goldfields</h3>
-      <p>Looking for gold was super hard and dangerous work. ⛏️ The first forty-niners used simple techniques like panning, where they swirled river water in a shallow pan to separate gold from sand and gravel. 💦 As the easy-to-find gold disappeared, miners had to develop more complicated methods like sluice boxes, hydraulic mining, and digging deep underground. 🕳️</p>
+      <p>Looking for gold was super hard and dangerous work. ⛏️ The first forty-niners used simple techniques like panning, where they swirled river water in a shallow pan to separate gold from sand and gravel. 💦 As the easy-to-find gold disappeared, miners had to develop more complicated methods like sluice boxes, hydraulicmining, and digging deep underground. 🕳️</p>
 
       <p>Most miners lived in tents or rough cabins without many comforts. 🏕️ Food, tools, and basic supplies cost a fortune because everything had to be shipped from far away. 💰 Many miners spent every penny they earned just to survive, and most never actually got rich. 😢</p>
 
@@ -858,45 +858,7 @@ export const articles: Article[] = [
       }
     ],
     relatedArticles: ["3", "5"]
-  }
-];
-
-export const getArticleBySlug = (slug: string): Article | undefined => {
-  return articles.find(article => article.slug === slug);
-};
-
-export const getArticleById = (id: string): Article | undefined => {
-  return articles.find(article => article.id === id);
-};
-
-export const getRelatedArticles = (articleId: string): Article[] => {
-  const article = getArticleById(articleId);
-  if (!article || !article.relatedArticles) return [];
-
-  return article.relatedArticles
-    .map(id => getArticleById(id))
-    .filter((article): article is Article => article !== undefined);
-};
-
-export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'): Article[] => {
-  query = query.toLowerCase();
-
-  return articles.filter(article => {
-    // Filter by age level if specified
-    if (ageLevel !== 'All' && article.ageLevel !== ageLevel) {
-      return false;
-    }
-
-    // Search in title, description, and content
-    return (
-      article.title.toLowerCase().includes(query) ||
-      article.description.toLowerCase().includes(query) ||
-      article.content.toLowerCase().includes(query) ||
-      article.tags.some(tag => tag.name.toLowerCase().includes(query))
-    );
-  });
-};
-
+  },
   {
     id: "7",
     slug: "human-migration-patterns",
@@ -1106,9 +1068,7 @@ export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'):
       <p>Maya priests and astronomers carefully tracked the movements of the stars, sun, moon, and planets. 🔭 They could predict solar eclipses and the movements of Venus with amazing accuracy - all without telescopes or modern equipment! ✨ These calculations helped them plan religious ceremonies and agricultural cycles. 🌱</p>
 
       <h3>Incredible Builders</h3>
-      <p>Have you ever seen pictures of Maya pyramids rising above the jungle canopy? 🌴 These massive structures weren't just amazing to look at—they were built with careful mathematical and astronomical alignments! 📐 For example, the main pyramid at Chichen Itza was designed so that on the spring and fall equinoxes, sunlight creates a shadow pattern that looks like a snake slithering down the stairs! 🐍</p>
-
-      <p>Maya cities like Tikal, Palenque, and Copan featured huge ceremonial plazas, palaces, ball courts, and reservoirs—all built without metal tools, wheeled vehicles, or beasts of burden! 🏙️ They even built raised roads called "sacbeob" (white roads) that connected different Maya cities and were usable even during the rainy season! 🛣️</p>
+      <p>Have you ever seen pictures of Maya pyramids rising above the jungle canopy? 🌴 These massive structures weren't just amazing to look at—they were built with careful mathematical and astronomical alignments! 📐 For example, the main pyramid at Chichen Itza was designed so that on the spring and fall equinoxes, sunlight creates a shadow pattern that looks like a snake slithering down the stairs! 🐍</p><p>Maya cities like Tikal, Palenque, and Copan featured huge ceremonial plazas, palaces, ball courts, and reservoirs—all built without metal tools, wheeled vehicles, or beasts of burden! 🏙️ They even built raised roads called "sacbeob" (white roads) that connected different Maya cities and were usable even during the rainy season! 🛣️</p>
 
       <h3>Mathematics and Writing</h3>
       <p>The Maya developed an advanced writing system using hieroglyphs that could express complex ideas and record historical events. 📜 For many years, researchers couldn't read these symbols, but now we can understand much of what the Maya wrote about their rulers, wars, and religious beliefs! 👑</p>
@@ -1294,3 +1254,41 @@ export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'):
     ],
     relatedArticles: ["2", "5"]
   }
+
+];
+
+export const getArticleBySlug = (slug: string): Article | undefined => {
+  return articles.find(article => article.slug === slug);
+};
+
+export const getArticleById = (id: string): Article | undefined => {
+  return articles.find(article => article.id === id);
+};
+
+export const getRelatedArticles = (articleId: string): Article[] => {
+  const article = getArticleById(articleId);
+  if (!article || !article.relatedArticles) return [];
+
+  return article.relatedArticles
+    .map(id => getArticleById(id))
+    .filter((article): article is Article => article !== undefined);
+};
+
+export const searchArticles = (query: string, ageLevel: AgeLevelFilter = 'All'): Article[] => {
+  query = query.toLowerCase();
+
+  return articles.filter(article => {
+    // Filter by age level if specified
+    if (ageLevel !== 'All' && article.ageLevel !== ageLevel) {
+      return false;
+    }
+
+    // Search in title, description, and content
+    return (
+      article.title.toLowerCase().includes(query) ||
+      article.description.toLowerCase().includes(query) ||
+      article.content.toLowerCase().includes(query) ||
+      article.tags.some(tag => tag.name.toLowerCase().includes(query))
+    );
+  });
+};
