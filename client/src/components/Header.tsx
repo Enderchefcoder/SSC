@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Menu, X, Sun, Moon } from "lucide-react";
@@ -75,6 +74,11 @@ const Header = () => {
                 Greek Gods
               </a>
             </Link>
+            <Link href="/common-core">
+              <a className="text-base font-medium text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400 transition-colors">
+                Common Core
+              </a>
+            </Link>
             <Link href="/about">
               <a className="text-base font-medium text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400 transition-colors">
                 About
@@ -138,6 +142,14 @@ const Header = () => {
                   onClick={closeMenu}
                 >
                   Greek Gods
+                </a>
+              </Link>
+              <Link href="/common-core">
+                <a
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-primary-400 dark:hover:bg-gray-800"
+                  onClick={closeMenu}
+                >
+                  Common Core
                 </a>
               </Link>
               <Link href="/about">

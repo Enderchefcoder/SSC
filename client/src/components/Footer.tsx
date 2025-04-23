@@ -74,6 +74,13 @@ const Footer = () => {
                       </a>
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/common-core">
+                      <a className="text-base text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400">
+                        Common Core
+                      </a>
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
